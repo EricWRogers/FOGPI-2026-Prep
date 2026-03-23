@@ -202,15 +202,6 @@ namespace Canis
             return;
         }
 
-#ifdef __EMSCRIPTEN__
-        (void)_type;
-
-        // Browser builds should stay on requestAnimationFrame / VSync timing.
-        if (!SDL_GL_SetSwapInterval(static_cast<int>(VSYNC)))
-            Debug::Warning("SDL_GL_SetSwapInterval(VSYNC) failed: %s", SDL_GetError());
-        return;
-#endif
-
         if (!SDL_GL_SetSwapInterval(static_cast<int>(_type)))
         {
             Debug::Warning("SDL_GL_SetSwapInterval(%d) failed: %s", static_cast<int>(_type), SDL_GetError());

@@ -78,7 +78,7 @@ namespace Canis
         unsigned int m_fontSize = 0;
         static const int atlasWidth = 1024;
         static const int atlasHeight = 1024;
-        unsigned char m_atlasData[atlasWidth * atlasHeight] = {};
+        unsigned char m_atlasData[atlasWidth * atlasHeight * 4] = {};
     public:
         explicit TextAsset(unsigned int _fontSize) : m_fontSize(_fontSize) {}
 

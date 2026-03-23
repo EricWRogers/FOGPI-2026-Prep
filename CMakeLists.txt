@@ -146,6 +146,39 @@ else()
     "Run: git submodule update --init --recursive external/JoltPhysics")
 endif()
 
+# FreeType
+set(FREETYPE_SUBMODULE_DIR "${CMAKE_SOURCE_DIR}/external/freetype")
+if (EXISTS "${FREETYPE_SUBMODULE_DIR}/CMakeLists.txt")
+  # Keep the vendored FreeType build deterministic across platforms by
+  # disabling optional host-discovered dependencies we don't need.
+  set(FT_DISABLE_ZLIB ON CACHE BOOL "Disable FreeType zlib support" FORCE)
+  set(FT_DISABLE_BZIP2 ON CACHE BOOL "Disable FreeType bzip2 support" FORCE)
+  set(FT_DISABLE_PNG ON CACHE BOOL "Disable FreeType PNG support" FORCE)
+  set(FT_DISABLE_HARFBUZZ ON CACHE BOOL "Disable FreeType HarfBuzz support" FORCE)
+  set(FT_DISABLE_BROTLI ON CACHE BOOL "Disable FreeType Brotli support" FORCE)
+  add_subdirectory(external/freetype EXCLUDE_FROM_ALL)
+  if (NOT TARGET Freetype::Freetype)
+    add_library(Freetype::Freetype ALIAS freetype)
+  endif()
+  if (CANIS_PLATFORM_WEB)
+    # FreeType treats Emscripten as UNIX and picks its mmap/open-based stream
+    # backend, which doesn't configure cleanly here. Use the portable stdio
+    # backend for web builds instead.
+    get_target_property(FREETYPE_SOURCES freetype SOURCES)
+    list(REMOVE_ITEM FREETYPE_SOURCES
+      "builds/unix/ftsystem.c"
+      "${FREETYPE_SUBMODULE_DIR}/builds/unix/ftsystem.c"
+      "src/base/ftsystem.c"
+      "${FREETYPE_SUBMODULE_DIR}/src/base/ftsystem.c")
+    list(APPEND FREETYPE_SOURCES "${FREETYPE_SUBMODULE_DIR}/src/base/ftsystem.c")
+    set_property(TARGET freetype PROPERTY SOURCES "${FREETYPE_SOURCES}")
+  endif()
+else()
+  message(FATAL_ERROR
+    "FreeType submodule is not initialized. "
+    "Run: git submodule update --init --recursive external/freetype")
+endif()
+
 # Jolt's CMake sets C++17 globally; restore project requirement.
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

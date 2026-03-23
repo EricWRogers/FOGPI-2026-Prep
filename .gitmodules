@@ -22,3 +22,6 @@
 [submodule "external/JoltPhysics"]
 	path = external/JoltPhysics
 	url = https://github.com/jrouwe/JoltPhysics.git
+[submodule "external/freetype"]
+	path = external/freetype
+	url = https://gitlab.freedesktop.org/freetype/freetype.git

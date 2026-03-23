@@ -250,8 +250,13 @@ namespace Canis
             {
                 for (int x = 0; x < fontFace->glyph->bitmap.width; x++)
                 {
-                    m_atlasData[(currentY + y) * atlasWidth + (currentX + x)] =
+                    const int atlasIndex = ((currentY + y) * atlasWidth + (currentX + x)) * 4;
+                    const unsigned char alpha =
                         fontFace->glyph->bitmap.buffer[y * fontFace->glyph->bitmap.width + x];
+                    m_atlasData[atlasIndex + 0] = 255;
+                    m_atlasData[atlasIndex + 1] = 255;
+                    m_atlasData[atlasIndex + 2] = 255;
+                    m_atlasData[atlasIndex + 3] = alpha;
                 }
             }
 
@@ -272,16 +277,11 @@ namespace Canis
 
         glGenTextures(1, &m_texture);
         glBindTexture(GL_TEXTURE_2D, m_texture);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, atlasWidth, atlasHeight, 0, GL_RED, GL_UNSIGNED_BYTE, m_atlasData);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, atlasWidth, atlasHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_atlasData);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-        // Sample RED channel as alpha so text blends like a normal glyph mask.
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_ONE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_G, GL_ONE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_ONE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_A, GL_RED);
         glBindTexture(GL_TEXTURE_2D, 0);
 
         FT_Done_Face(fontFace);

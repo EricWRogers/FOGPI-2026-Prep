@@ -66,7 +66,7 @@ Entities:
     Canis::Model:
       color: [0.32, 0.38, 0.46, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
   - Entity: 910011
     Name: Wall_North
@@ -107,7 +107,7 @@ Entities:
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
   - Entity: 910012
     Name: Wall_South
@@ -148,7 +148,7 @@ Entities:
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
   - Entity: 910013
     Name: Wall_West
@@ -189,7 +189,7 @@ Entities:
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
   - Entity: 910014
     Name: Wall_East
@@ -230,7 +230,7 @@ Entities:
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
   - Entity: 910020
     Name: Player
@@ -271,7 +271,7 @@ Entities:
     Canis::Model:
       color: [0.2, 0.55, 1, 1]
       ModelAsset:
-        path: assets/models/physics_sphere.glb
+        path: assets/defaults/models/sphere.glb
         uuid: 17154083321347000102
     RollABall::PlayerController:
       moveForce: 3000
@@ -320,7 +320,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -363,7 +363,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -406,7 +406,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -449,7 +449,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -492,7 +492,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -535,7 +535,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -578,7 +578,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -621,7 +621,7 @@ Entities:
     Canis::Model:
       color: [1, 0.87, 0.22, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
@@ -664,9 +664,38 @@ Entities:
     Canis::Model:
       color: [1, 1, 1, 1]
       ModelAsset:
-        path: assets/models/physics_cube.glb
+        path: assets/defaults/models/cube.glb
         uuid: 17154083321347000101
     RollABall::BoostPad:
       yeetForce: 10
       player: 910020
       ground: 910010
+  - Entity: 9658217481396747486
+    Name: Camera2D
+    Tag: ""
+    Canis::Camera2D:
+      position: [0, 0]
+      scale: 1
+  - Entity: 6648734122906130673
+    Name: FPS_Counter
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [70, 33]
+      scale: [1, 1]
+      originOffset: [0, 0]
+      depth: 0.001
+      rotation: 0
+      parent: 0
+      children:
+        []
+    Canis::Text:
+      text: "FPS: 0"
+      color: [1, 1, 1, 1]
+      alignment: 2
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 14618725492368012463
+        fontSize: 32
+    SuperPupUtilities::FPSCounter: ~

@@ -61,14 +61,15 @@ if(NOT CANIS_PLATFORM_WEB)
     )
 endif()
 
-find_package(Freetype QUIET)
-if (Freetype_FOUND)
-    target_link_libraries(${CANIS_ENGINE_LIB} PRIVATE Freetype::Freetype)
-    target_compile_definitions(${CANIS_ENGINE_LIB} PRIVATE CANIS_HAS_FREETYPE)
-    message(STATUS "CanisEngine: FreeType enabled")
-else()
-    message(WARNING "CanisEngine: FreeType not found. TextAsset loading will be disabled.")
+if(NOT TARGET Freetype::Freetype)
+    message(FATAL_ERROR
+        "CanisEngine requires the vendored FreeType submodule target. "
+        "Run: git submodule update --init --recursive external/freetype")
 endif()
+
+target_link_libraries(${CANIS_ENGINE_LIB} PRIVATE Freetype::Freetype)
+target_compile_definitions(${CANIS_ENGINE_LIB} PRIVATE CANIS_HAS_FREETYPE)
+message(STATUS "CanisEngine: using vendored FreeType submodule")
 
 add_executable(${PROJECT_NAME} main.cpp)
 

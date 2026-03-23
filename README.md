@@ -13,6 +13,7 @@ Custom C++ game engine and gameplay runtime built around:
 ## Build
 
 ```bash
+git submodule update --init --recursive
 cmake -S . -B build
 cmake --build build -j4
 ```
