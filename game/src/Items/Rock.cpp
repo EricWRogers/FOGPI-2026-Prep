@@ -1,6 +1,7 @@
 #include <Items/Rock.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/InputManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 
 ScriptConf rockConf = {};
@@ -27,4 +28,22 @@ void Rock::Update(float _dt) {}
 std::string Rock::GetName()
 {
     return "Rock";
+}
+
+std::string Rock::GetMessage()
+{
+    return std::string("Press E to Pickup ") + ScriptName;
+}
+
+bool Rock::HandleInteraction()
+{
+    InputManager& input = entity.scene.GetInputManager();
+
+    if (input.JustPressedKey(Key::E))
+    {
+        entity.Destroy();
+        return true;
+    }
+
+    return false;
 }

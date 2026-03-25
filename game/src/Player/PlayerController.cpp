@@ -1,7 +1,8 @@
 #include <Player/PlayerController.hpp>
 
-#include <Environment/Block.hpp>
-#include <Items/Item.hpp>
+#include <Environment/I_Block.hpp>
+#include <I_Interactable.hpp>
+#include <Items/I_Item.hpp>
 #include <UI/InfoText.hpp>
 
 #include <Canis/App.hpp>
@@ -146,33 +147,33 @@ void PlayerController::Update(float _dt)
             100.0f,
             scannerCollisionMask))
         {
-            std::string name = "";
+            std::string message = "";
+            bool interacted = false;
 
-            if (Block* block = scannerHit.entity->GetScript<Block>()) {
-                switch(block->blockType) {
-                    case 0:
-                        name = "Rock Block";
-                        break;
-                    case 1:
-                        name = "Gold Block";
-                        break;
-                    case 2:
-                        name = "Uranium Block";
-                        break;
+            if (I_Block* block = scannerHit.entity->GetScript<I_Block>())
+                message = block->GetName();
+
+            if (I_Interactable* interactable = scannerHit.entity->GetScript<I_Interactable>()) {
+                message = interactable->GetMessage();
+                if (Entity* info = entity.scene.GetEntityWithTag("INFO_TEXT")) {
+                    if (InfoText* infoText = info->GetScript<InfoText>())
+                    {
+                        interacted = interactable->HandleInteraction();
+                        if (interacted == false) {
+                            infoText->SetText(message);
+                        }
+                        else {
+                            infoText->EarlyFadeout();
+                        }
+                    }
                 }
             }
-
-            if (I_Item* item = scannerHit.entity->GetScript<I_Item>()) {
-                name = std::string("Press E to Pickup ") + item->GetName();
-
-                if (input.JustPressedKey(Key::E))
-                    scannerHit.entity->Destroy();
-            }
-
-            if (name != "")
+            else if (message != "")
+            {
                 if (Entity* info = entity.scene.GetEntityWithTag("INFO_TEXT"))
                     if (InfoText* infoText = info->GetScript<InfoText>())
-                        infoText->SetText(name);
+                        infoText->SetText(message);
+            }
         }
     }
 }

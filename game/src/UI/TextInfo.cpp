@@ -51,3 +51,8 @@ void InfoText::SetText(const std::string &_info)
     Text& text = entity.GetComponent<Text>();
     text.SetText(_info);
 }
+
+void InfoText::EarlyFadeout() {
+    float earlyFadeout = fadeoutTime * 0.1;
+    timer = std::min(timer, earlyFadeout);
+}

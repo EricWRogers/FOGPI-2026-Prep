@@ -20,6 +20,7 @@ public:
     void Update(float _dt);
 
     void SetText(const std::string &_info);
+    void EarlyFadeout();
 };
 
 extern void RegisterInfoTextScript(Canis::App& _app);

@@ -1,6 +1,7 @@
 #include <Items/Uranium.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/InputManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 
 ScriptConf uraniumConf = {};
@@ -27,4 +28,22 @@ void Uranium::Update(float _dt) {}
 std::string Uranium::GetName()
 {
     return "Uranium";
+}
+
+std::string Uranium::GetMessage()
+{
+    return std::string("Press E to Pickup ") + ScriptName;
+}
+
+bool Uranium::HandleInteraction()
+{
+    InputManager& input = entity.scene.GetInputManager();
+
+    if (input.JustPressedKey(Key::E))
+    {
+        entity.Destroy();
+        return true;
+    }
+
+    return false;
 }

@@ -1,8 +1,9 @@
 #pragma once
-#include <Items/Item.hpp>
+#include <I_Interactable.hpp>
+#include <Items/I_Item.hpp>
 #include <Canis/Entity.hpp>
 
-class Gold : public Canis::ScriptableEntity, public I_Item
+class Gold : public Canis::ScriptableEntity, public I_Item, public I_Interactable
 {
 private:
 
@@ -16,7 +17,12 @@ public:
     void Destroy();
     void Update(float _dt);
 
+    // I_Item
     std::string GetName() override;
+
+    // I_Interactable
+    std::string GetMessage() override;
+    bool HandleInteraction() override;
 };
 
 extern void RegisterGoldScript(Canis::App& _app);
