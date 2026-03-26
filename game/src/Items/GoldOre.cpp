@@ -41,7 +41,7 @@ bool GoldOre::HandleInteraction(Canis::Entity* _interactingEntity)
 {
     InputManager& input = entity.scene.GetInputManager();
 
-    if (input.JustPressedKey(Key::E))
+    if (input.GetKey(Key::E))
     {
         if (_interactingEntity != nullptr)
             if (SuperPupUtilities::Inventory* inventory = _interactingEntity->GetScript<SuperPupUtilities::Inventory>())

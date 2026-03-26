@@ -84,10 +84,7 @@ namespace Canis
         CreateSkyboxGeometry();
     }
 
-    void MeshRenderer3DSystem::Ready()
-    {
-        // No cached views required.
-    }
+    void MeshRenderer3DSystem::Ready() {}
 
     void MeshRenderer3DSystem::OnDestroy()
     {
