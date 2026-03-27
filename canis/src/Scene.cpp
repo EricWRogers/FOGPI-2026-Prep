@@ -633,7 +633,7 @@ namespace Canis
             return;
         }
 
-        if (m_isUpdating)
+        if (m_isUpdating || m_isLoadingEntityNodes)
         {
             if (m_entities[_id]->active)
             {

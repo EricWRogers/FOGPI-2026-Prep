@@ -517,7 +517,12 @@ namespace Canis
                     comp["flipY"] = sprite.flipY;
 
                     YAML::Node textureAsset;
-                    textureAsset["uuid"] = (uint64_t)AssetManager::GetMetaFile(AssetManager::Get<TextureAsset>(sprite.textureHandle.id)->GetPath())->uuid;
+                    const std::string texturePath = AssetManager::GetPath(sprite.textureHandle.id);
+                    if (texturePath != "Path was not found in AssetLibrary")
+                    {
+                        if (MetaFileAsset* meta = AssetManager::GetMetaFile(texturePath))
+                            textureAsset["uuid"] = (uint64_t)meta->uuid;
+                    }
                     
                     comp["TextureAsset"] = textureAsset;
                     _node["Canis::Sprite2D"] = comp;
@@ -531,11 +536,27 @@ namespace Canis
                     sprite.uv = comp["uv"].as<Vector4>();
                     sprite.flipX = comp["flipX"].as<bool>(false);
                     sprite.flipY = comp["flipY"].as<bool>(false);
+                    sprite.textureHandle = AssetManager::GetTextureHandle("assets/defaults/textures/square.png");
                     if (auto textureAsset = comp["TextureAsset"])
                     {
-                        UUID uuid = textureAsset["uuid"].as<uint64_t>();
-                        std::string path = AssetManager::GetPath(uuid);
-                        sprite.textureHandle = AssetManager::GetTextureHandle(path);
+                        std::string path = "";
+
+                        if (YAML::Node uuidNode = textureAsset["uuid"])
+                        {
+                            const UUID uuid = uuidNode.as<uint64_t>(0);
+                            if ((uint64_t)uuid != 0)
+                            {
+                                path = AssetManager::GetPath(uuid);
+                                if (path == "Path was not found in AssetLibrary")
+                                    path.clear();
+                            }
+                        }
+
+                        if (path.empty())
+                            path = textureAsset["path"].as<std::string>("");
+
+                        if (!path.empty())
+                            sprite.textureHandle = AssetManager::GetTextureHandle(path);
                     }
                     //sprite.textureHandle = sprite2DComponent["TextureHandle"].as<TextureHandle>();//AssetManager::GetTextureHandle(sprite2DComponent["textureHandle"].as<std::string>());
                     if (_callCreate)
@@ -582,7 +603,17 @@ namespace Canis
 
                     ImGui::SameLine();
 
-                    ImGui::Button(AssetManager::GetMetaFile(AssetManager::GetPath(sprite->textureHandle.id))->name.c_str(), ImVec2(150, 0));
+                    const std::string texturePath = AssetManager::GetPath(sprite->textureHandle.id);
+                    std::string textureLabel = "[missing texture]";
+                    if (texturePath != "Path was not found in AssetLibrary")
+                    {
+                        if (MetaFileAsset* meta = AssetManager::GetMetaFile(texturePath))
+                            textureLabel = meta->name;
+                        else
+                            textureLabel = texturePath;
+                    }
+
+                    ImGui::Button(textureLabel.c_str(), ImVec2(150, 0));
 
                     if (ImGui::BeginDragDropTarget())
                     {
@@ -1164,7 +1195,10 @@ namespace Canis
                     comp["active"] = meshCollider->active;
                     comp["useAttachedModel"] = meshCollider->useAttachedModel;
                     if (!meshCollider->modelPath.empty())
-                        comp["modelPath"] = meshCollider->modelPath;
+                    {
+                        if (MetaFileAsset* meta = AssetManager::GetMetaFile(meshCollider->modelPath))
+                            comp["modelUUID"] = (uint64_t)meta->uuid;
+                    }
                     _node["Canis::MeshCollider"] = comp;
                 }
             },
@@ -1178,7 +1212,21 @@ namespace Canis
                     auto &meshCollider = *_entity.AddComponent<MeshCollider>();
                     meshCollider.active = comp["active"].as<bool>(true);
                     meshCollider.useAttachedModel = comp["useAttachedModel"].as<bool>(true);
-                    meshCollider.modelPath = comp["modelPath"].as<std::string>("");
+                    meshCollider.modelPath.clear();
+                    if (YAML::Node modelUUIDNode = comp["modelUUID"])
+                    {
+                        const UUID uuid = modelUUIDNode.as<uint64_t>(0);
+                        if ((uint64_t)uuid != 0)
+                        {
+                            const std::string path = AssetManager::GetPath(uuid);
+                            if (path.rfind("Path was not found", 0) != 0)
+                                meshCollider.modelPath = path;
+                        }
+                    }
+
+                    if (meshCollider.modelPath.empty())
+                        meshCollider.modelPath = comp["modelPath"].as<std::string>("");
+
                     meshCollider.modelId = -1;
                     if (!meshCollider.modelPath.empty())
                         meshCollider.modelId = AssetManager::LoadModel(meshCollider.modelPath);
@@ -1600,8 +1648,6 @@ namespace Canis
                         if (ModelAsset* modelAsset = AssetManager::GetModel(model.modelId))
                         {
                             YAML::Node modelAssetNode;
-                            modelAssetNode["path"] = modelAsset->GetPath();
-
                             if (MetaFileAsset* meta = AssetManager::GetMetaFile(modelAsset->GetPath()))
                                 modelAssetNode["uuid"] = (uint64_t)meta->uuid;
 

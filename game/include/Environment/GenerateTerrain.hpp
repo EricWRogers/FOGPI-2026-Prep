@@ -28,15 +28,15 @@ public:
     int chunksX = 4;
     int chunksZ = 4;
     int chunkSize = 16;
-    int chunkHeight = 24;
+    int chunkHeight = 34;
     int baseHeight = 6;
-    int maxHeightVariation = 10;
-    int hillHeightBoost = 6;
+    int maxHeightVariation = 13;
+    int hillHeightBoost = 14;
     int bedrockLayerHeight = 1;
-    int surfaceIceHeight = 11;
-    float heightNoiseScale = 0.075f;
-    float detailNoiseScale = 0.16f;
-    float hillNoiseScale = 0.03f;
+    int surfaceIceHeight = 13;
+    float heightNoiseScale = 0.06f;
+    float detailNoiseScale = 0.14f;
+    float hillNoiseScale = 0.022f;
     float caveNoiseScale = 0.12f;
 
     Canis::SceneAssetHandle rockDropPrefab = {};

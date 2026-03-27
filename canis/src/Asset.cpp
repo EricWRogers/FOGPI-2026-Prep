@@ -203,6 +203,9 @@ namespace Canis
         m_path = _path;
 
 #if defined(CANIS_HAS_FREETYPE)
+        static constexpr int kGlyphPadding = 2;
+        static constexpr float kGlyphAlphaSharpen = 1.25f;
+
         FT_Library fontLibrary;
         if (FT_Init_FreeType(&fontLibrary))
         {
@@ -233,30 +236,46 @@ namespace Canis
                 continue;
             }
 
-            if (currentX + fontFace->glyph->bitmap.width > atlasWidth)
+            const int glyphWidth = static_cast<int>(fontFace->glyph->bitmap.width);
+            const int glyphHeight = static_cast<int>(fontFace->glyph->bitmap.rows);
+            const int paddedWidth = std::max(glyphWidth, 1) + (kGlyphPadding * 2);
+            const int paddedHeight = std::max(glyphHeight, 1) + (kGlyphPadding * 2);
+
+            if (currentX + paddedWidth > atlasWidth)
             {
                 currentX = 0;
                 currentY += maxHeightInRow;
                 maxHeightInRow = 0;
             }
 
-            if (currentY + fontFace->glyph->bitmap.rows > atlasHeight)
+            if (currentY + paddedHeight > atlasHeight)
             {
                 Debug::Error("Text atlas is too small for font '%s' at size %u", _path.c_str(), m_fontSize);
                 break;
             }
 
-            for (int y = 0; y < fontFace->glyph->bitmap.rows; y++)
+            for (int y = -kGlyphPadding; y < glyphHeight + kGlyphPadding; y++)
             {
-                for (int x = 0; x < fontFace->glyph->bitmap.width; x++)
+                for (int x = -kGlyphPadding; x < glyphWidth + kGlyphPadding; x++)
                 {
-                    const int atlasIndex = ((currentY + y) * atlasWidth + (currentX + x)) * 4;
+                    if (glyphWidth <= 0 || glyphHeight <= 0)
+                        continue;
+
+                    const int sourceX = std::clamp(x, 0, glyphWidth - 1);
+                    const int sourceY = std::clamp(y, 0, glyphHeight - 1);
                     const unsigned char alpha =
-                        fontFace->glyph->bitmap.buffer[y * fontFace->glyph->bitmap.width + x];
+                        fontFace->glyph->bitmap.buffer[(sourceY * glyphWidth) + sourceX];
+                    const float alpha01 = static_cast<float>(alpha) / 255.0f;
+                    const unsigned char sharpenedAlpha =
+                        static_cast<unsigned char>(std::round(std::pow(alpha01, kGlyphAlphaSharpen) * 255.0f));
+                    const int atlasX = currentX + kGlyphPadding + x;
+                    const int atlasY = currentY + kGlyphPadding + y;
+                    const int atlasIndex = ((atlasY * atlasWidth) + atlasX) * 4;
+
                     m_atlasData[atlasIndex + 0] = 255;
                     m_atlasData[atlasIndex + 1] = 255;
                     m_atlasData[atlasIndex + 2] = 255;
-                    m_atlasData[atlasIndex + 3] = alpha;
+                    m_atlasData[atlasIndex + 3] = sharpenedAlpha;
                 }
             }
 
@@ -266,13 +285,17 @@ namespace Canis
             character.bearingX = fontFace->glyph->bitmap_left;
             character.bearingY = fontFace->glyph->bitmap_top;
             character.advance = static_cast<unsigned int>(fontFace->glyph->advance.x);
-            character.atlasPos = Vector2((float)currentX / atlasWidth, (float)currentY / atlasHeight);
-            character.atlasSize = Vector2((float)fontFace->glyph->bitmap.width / atlasWidth, (float)fontFace->glyph->bitmap.rows / atlasHeight);
+            character.atlasPos = Vector2(
+                static_cast<float>(currentX + kGlyphPadding) / atlasWidth,
+                static_cast<float>(currentY + kGlyphPadding) / atlasHeight);
+            character.atlasSize = Vector2(
+                static_cast<float>(glyphWidth) / atlasWidth,
+                static_cast<float>(glyphHeight) / atlasHeight);
 
             characters[c] = character;
 
-            currentX += fontFace->glyph->bitmap.width;
-            maxHeightInRow = std::max(maxHeightInRow, (int)fontFace->glyph->bitmap.rows);
+            currentX += paddedWidth;
+            maxHeightInRow = std::max(maxHeightInRow, paddedHeight);
         }
 
         glGenTextures(1, &m_texture);
@@ -281,7 +304,7 @@ namespace Canis
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glBindTexture(GL_TEXTURE_2D, 0);
 
         FT_Done_Face(fontFace);

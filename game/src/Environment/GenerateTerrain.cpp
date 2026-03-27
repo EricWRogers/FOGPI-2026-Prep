@@ -154,7 +154,8 @@ namespace
             static_cast<float>(_globalZ) * _terrain.detailNoiseScale,
             _terrain.seed + 101,
             2);
-        const float blended = std::clamp((broad * 0.75f) + (detail * 0.25f), 0.0f, 1.0f);
+        const float macroRise = std::pow(Saturate((broad - 0.50f) / 0.50f), 1.45f);
+        const float blended = std::clamp((broad * 0.62f) + (detail * 0.18f) + (macroRise * 0.20f), 0.0f, 1.0f);
 
         const float hillScale = std::max(0.005f, _terrain.hillNoiseScale);
         const float hillShape = RidgedNoise2D(
@@ -167,11 +168,17 @@ namespace
             static_cast<float>(_globalZ) * hillScale * 0.55f,
             _terrain.seed + 211,
             2);
-        const float hillStrength = Saturate((hillShape - 0.38f) / 0.62f) * Saturate((hillMask - 0.42f) / 0.58f);
-        const float hillBoost = std::pow(hillStrength, 1.35f) * static_cast<float>(std::max(0, _terrain.hillHeightBoost));
+        const float hillStrength = Saturate((hillShape - 0.28f) / 0.72f) * Saturate((hillMask - 0.30f) / 0.70f);
+        const float hillBoost = std::pow(hillStrength, 1.08f) * static_cast<float>(std::max(0, _terrain.hillHeightBoost));
+        const float ridgeLift = std::pow(Saturate(hillShape), 2.1f) *
+            static_cast<float>(std::max(0, _terrain.hillHeightBoost)) * 0.30f * hillMask;
 
         return _terrain.baseHeight
-            + static_cast<int>(std::round((blended * static_cast<float>(_terrain.maxHeightVariation)) + hillBoost));
+            + static_cast<int>(std::round(
+                (blended * static_cast<float>(_terrain.maxHeightVariation)) +
+                (macroRise * static_cast<float>(_terrain.maxHeightVariation) * 0.45f) +
+                hillBoost +
+                ridgeLift));
     }
 
     Canis::Vector3 GetCaveWarpedPosition(const GenerateTerrain &_terrain, int _globalX, int _y, int _globalZ)
