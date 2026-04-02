@@ -655,7 +655,7 @@ Entities:
       yeetForce: 10
       player: 910020
       ground: 910010
-  - Entity: 15184857591600661882
+  - Entity: 910200
     Name: HUD
     Tag: ""
     Canis::Canvas:
@@ -670,85 +670,112 @@ Entities:
       anchorMax: [1, 1]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.001
+      depth: 0.02
       rotation: 0
       rotationOriginOffset: [0, 0]
       parent: 0
       children:
-        - 513738397781658186
-  - Entity: 513738397781658186
-    Name: PauseMenu
+        - 4158325390067922843
+    RollABall::PauseMenuController:
+      pauseMenu: 4158325390067922843
+  - Entity: 910201
+    Name: PauseBackdrop
     Tag: ""
     Canis::RectTransform:
       active: true
       position: [0, 0]
-      size: [300, 300]
+      size: [0, 0]
       scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.001
+      depth: 0
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 15184857591600661882
+      parent: 4158325390067922843
       children:
-        - 16139851625670579374
-        - 5619532064968242118
-        - 9023982696254970992
+        []
     Canis::Sprite2D:
-      color: [0.26666668, 0.26666668, 0.26666668, 0.78039217]
+      color: [0.03, 0.05, 0.08, 0.7]
       uv: [0, 0, 1, 1]
       flipX: false
       flipY: false
       TextureAsset:
         uuid: 16060716090729117806
-  - Entity: 16139851625670579374
-    Name: Title
+  - Entity: 910202
+    Name: PausePanel
     Tag: ""
     Canis::RectTransform:
       active: true
-      position: [0, -20]
-      size: [150, 33]
+      position: [0, 0]
+      size: [280, 200]
       scale: [1, 1]
-      anchorMin: [0.5, 1]
-      anchorMax: [0.5, 1]
-      pivot: [0.5, 1]
+      anchorMin: [0.5, 0.5]
+      anchorMax: [0.5, 0.5]
+      pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.001
+      depth: 0.01
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
+      parent: 4158325390067922843
+      children:
+        - 910203
+        - 910204
+        - 910206
+    Canis::Sprite2D:
+      color: [0.12, 0.16, 0.22, 0.97]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 16060716090729117806
+  - Entity: 910203
+    Name: PauseTitle
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 58]
+      size: [91, 33]
+      scale: [1, 1]
+      anchorMin: [0.5, 0.5]
+      anchorMax: [0.5, 0.5]
+      pivot: [0.5, 0.5]
+      originOffset: [0, 0]
+      depth: 0.02
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 910202
       children:
         []
     Canis::Text:
-      text: Pause Menu
+      text: Paused
       color: [1, 1, 1, 1]
       alignment: 2
       horizontalBoundary: 0
       FontAsset:
         uuid: 14618725492368012463
         fontSize: 32
-  - Entity: 5619532064968242118
-    Name: Resume
+  - Entity: 910204
+    Name: ResumeButton
     Tag: ""
     Canis::RectTransform:
       active: true
-      position: [0, 0]
-      size: [160, 48]
+      position: [0, -2]
+      size: [180, 44]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.001
+      depth: 0.02
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
+      parent: 910202
       children:
-        - 7766606862118154735
+        - 910205
     Canis::Sprite2D:
-      color: [0.14, 0.18, 0.24, 0.98]
+      color: [0.18, 0.3, 0.41, 1]
       uv: [0, 0, 1, 1]
       flipX: false
       flipY: false
@@ -756,31 +783,31 @@ Entities:
         uuid: 16060716090729117806
     Canis::UIButton:
       active: true
-      targetEntity: 0
-      targetScript: ""
-      actionName: ""
-      baseColor: [0.14, 0.18, 0.24, 0.98]
-      hoverColor: [0.19, 0.25, 0.34, 1]
-      pressedColor: [0.1, 0.14, 0.18, 1]
+      targetEntity: 910200
+      targetScript: RollABall::PauseMenuController
+      actionName: resume
+      baseColor: [0.18, 0.3, 0.41, 1]
+      hoverColor: [0.24, 0.39, 0.52, 1]
+      pressedColor: [0.14, 0.24, 0.33, 1]
       baseScale: 1
       hoverScale: 1.03
       pressedScale: 0.98
-  - Entity: 7766606862118154735
-    Name: Button Label
+  - Entity: 910205
+    Name: ResumeLabel
     Tag: ""
     Canis::RectTransform:
       active: true
       position: [0, 0]
-      size: [99, 33]
+      size: [85, 28]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.00090000004
+      depth: 0.03
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 5619532064968242118
+      parent: 910204
       children:
         []
     Canis::Text:
@@ -790,27 +817,27 @@ Entities:
       horizontalBoundary: 0
       FontAsset:
         uuid: 14618725492368012463
-        fontSize: 32
-  - Entity: 9023982696254970992
-    Name: Quit
+        fontSize: 28
+  - Entity: 910206
+    Name: QuitButton
     Tag: ""
     Canis::RectTransform:
       active: true
-      position: [0, -60]
-      size: [160, 48]
+      position: [0, -62]
+      size: [180, 44]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.001
+      depth: 0.02
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
+      parent: 910202
       children:
-        - 6160159066433283229
+        - 910207
     Canis::Sprite2D:
-      color: [0.14, 0.18, 0.24, 0.98]
+      color: [0.38, 0.2, 0.2, 1]
       uv: [0, 0, 1, 1]
       flipX: false
       flipY: false
@@ -818,31 +845,31 @@ Entities:
         uuid: 16060716090729117806
     Canis::UIButton:
       active: true
-      targetEntity: 0
-      targetScript: ""
-      actionName: ""
-      baseColor: [0.14, 0.18, 0.24, 0.98]
-      hoverColor: [0.19, 0.25, 0.34, 1]
-      pressedColor: [0.1, 0.14, 0.18, 1]
+      targetEntity: 910200
+      targetScript: RollABall::PauseMenuController
+      actionName: quit
+      baseColor: [0.38, 0.2, 0.2, 1]
+      hoverColor: [0.49, 0.25, 0.25, 1]
+      pressedColor: [0.3, 0.16, 0.16, 1]
       baseScale: 1
       hoverScale: 1.03
       pressedScale: 0.98
-  - Entity: 6160159066433283229
-    Name: Button Label 2
+  - Entity: 910207
+    Name: QuitLabel
     Tag: ""
     Canis::RectTransform:
       active: true
       position: [0, 0]
-      size: [50, 33]
+      size: [44, 28]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
       pivot: [0.5, 0.5]
       originOffset: [0, 0]
-      depth: 0.00090000004
+      depth: 0.03
       rotation: 0
       rotationOriginOffset: [0, 0]
-      parent: 9023982696254970992
+      parent: 910206
       children:
         []
     Canis::Text:
@@ -852,4 +879,23 @@ Entities:
       horizontalBoundary: 0
       FontAsset:
         uuid: 14618725492368012463
-        fontSize: 32
+        fontSize: 28
+  - Entity: 4158325390067922843
+    Name: PauseMenu
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [0, 0]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
+      pivot: [0.5, 0.5]
+      originOffset: [0, 0]
+      depth: 0.2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 910200
+      children:
+        - 910201
+        - 910202
