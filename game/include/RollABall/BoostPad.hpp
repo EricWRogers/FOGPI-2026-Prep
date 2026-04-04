@@ -12,6 +12,8 @@ namespace RollABall
         float yeetForce = 10000.0f;
         Canis::Entity* player = nullptr;
         Canis::Entity* ground = nullptr;
+        Canis::AudioAssetHandle boostSFX = {};
+        float boostVolume = 0.45f;
 
         explicit BoostPad(Canis::Entity& _entity) : Canis::ScriptableEntity(_entity) {}
 
@@ -21,6 +23,9 @@ namespace RollABall
         void Update(float _dt) override;
         
         void CheckSensorEnter();
+
+    private:
+        bool m_playerWasOverlapping = false;
     };
 
     void RegisterBoostPadScript(Canis::App& _app);

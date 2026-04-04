@@ -1,0 +1,112 @@
+Environment:
+  ClearColor: [0.08, 0.1, 0.14, 1]
+Entities:
+  - Entity: 930001
+    Name: Camera
+    Tag: MainCamera
+    Canis::Transform:
+      active: true
+      position: [0, 6, 14]
+      rotation: [-0.38, 0, 0]
+      scale: [1, 1, 1]
+      parent: 0
+      children:
+        []
+    Canis::Camera:
+      primary: true
+      fovDegrees: 60
+      nearClip: 0.1
+      farClip: 300
+  - Entity: 930002
+    Name: Sun
+    Tag: ""
+    Canis::DirectionalLight:
+      enabled: true
+      color: [1, 0.97, 0.92, 1]
+      intensity: 4
+      direction: [-0.4, -1, -0.25]
+  - Entity: 930010
+    Name: Ground
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, -0.5, 0]
+      rotation: [0, 0, 0]
+      scale: [16, 1, 16]
+      parent: 0
+      children:
+        []
+    Canis::Material:
+      color: [0.24, 0.28, 0.34, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+    Canis::Model:
+      color: [0.24, 0.28, 0.34, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 930020
+    Name: Rotating Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-3, 1.25, 0]
+      rotation: [0, 0, 0]
+      scale: [1.5, 1.5, 1.5]
+      parent: 0
+      children:
+        - 930021
+    Canis::Material:
+      color: [0.28, 0.74, 0.98, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+    Canis::Model:
+      color: [0.28, 0.74, 0.98, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+    StarterContent::AutoRotate:
+      active: true
+      eulerSpeed: [0, 1.4, 0]
+  - Entity: 930021
+    Name: Orbiting Sphere
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [2.4, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [0.55, 0.55, 0.55]
+      parent: 930020
+      children:
+        []
+    Canis::Material:
+      color: [1, 0.86, 0.33, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+    Canis::Model:
+      color: [1, 0.86, 0.33, 1]
+      ModelAsset:
+        uuid: 17154083321347000102
+    StarterContent::AutoRotate:
+      active: true
+      eulerSpeed: [2.2, 0, 0.8]
+  - Entity: 930030
+    Name: Counter Spinner
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.5, 1, 0]
+      rotation: [0.6, 0, 0.25]
+      scale: [1, 2.2, 1]
+      parent: 0
+      children:
+        []
+    Canis::Material:
+      color: [0.98, 0.34, 0.46, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+    Canis::Model:
+      color: [0.98, 0.34, 0.46, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+    StarterContent::AutoRotate:
+      active: true
+      eulerSpeed: [0.4, -2.0, 0.9]

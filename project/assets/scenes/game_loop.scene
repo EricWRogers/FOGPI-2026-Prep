@@ -19,6 +19,14 @@ Entities:
       fovDegrees: 60
       nearClip: 0.1
       farClip: 300
+    GameAudio::SceneMusicPlayer:
+      music:
+        uuid: 16615052552665518759
+        path: assets/audio/music/roll_a_ball_theme.ogg
+      volume: 0.55
+      loops: -1
+      playOnReady: true
+      stopOnDestroy: true
   - Entity: 910002
     Name: Sun
     Tag: ""
@@ -317,6 +325,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910101
     Name: Pickup_01
     Tag: Pickup
@@ -359,6 +371,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910102
     Name: Pickup_02
     Tag: Pickup
@@ -401,6 +417,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910103
     Name: Pickup_03
     Tag: Pickup
@@ -443,6 +463,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910104
     Name: Pickup_04
     Tag: Pickup
@@ -485,6 +509,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910105
     Name: Pickup_05
     Tag: Pickup
@@ -527,6 +555,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910106
     Name: Pickup_06
     Tag: Pickup
@@ -569,6 +601,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 910107
     Name: Pickup_07
     Tag: Pickup
@@ -611,6 +647,10 @@ Entities:
         uuid: 17154083321347000101
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
+      collectSFX:
+        uuid: 5301973886649453638
+        path: assets/audio/sounds/pickup_collect.ogg
+      collectVolume: 0.4
   - Entity: 7448487586354055887
     Name: BoostPad
     Tag: ""
@@ -655,6 +695,10 @@ Entities:
       yeetForce: 10
       player: 910020
       ground: 910010
+      boostSFX:
+        uuid: 502589937444025964
+        path: assets/audio/sounds/boost_pad.wav
+      boostVolume: 0.45
   - Entity: 910200
     Name: HUD
     Tag: ""
@@ -678,6 +722,10 @@ Entities:
         - 4158325390067922843
     RollABall::PauseMenuController:
       pauseMenu: 4158325390067922843
+      uiClickSFX:
+        uuid: 11244151112683522107
+        path: assets/audio/sounds/ui_click.wav
+      clickVolume: 0.45
   - Entity: 910201
     Name: PauseBackdrop
     Tag: ""

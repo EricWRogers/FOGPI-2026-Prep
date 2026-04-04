@@ -19,6 +19,14 @@ Entities:
       fovDegrees: 60
       nearClip: 0.1
       farClip: 300
+    GameAudio::SceneMusicPlayer:
+      music:
+        uuid: 14860012892201401284
+        path: assets/audio/music/brawler_duel_theme.ogg
+      volume: 0.65
+      loops: -1
+      playOnReady: true
+      stopOnDestroy: true
   - Entity: 920002
     Name: Sun
     Tag: ""
@@ -152,6 +160,14 @@ Entities:
       maxHealth: 40
       logStateChanges: true
       hammerVisual: 920101
+      hitSFX:
+        uuid: 10802997553825365908
+        path: assets/audio/sounds/brawler_hit.ogg
+      hitVolume: 0.35
+      defeatSFX:
+        uuid: 13023494228368633677
+        path: assets/audio/sounds/brawler_defeat.ogg
+      defeatVolume: 0.55
   - Entity: 920101
     Name: Blue Hammer
     Tag: ""
@@ -201,6 +217,14 @@ Entities:
       maxHealth: 40
       logStateChanges: true
       hammerVisual: 920111
+      hitSFX:
+        uuid: 10802997553825365908
+        path: assets/audio/sounds/brawler_hit.ogg
+      hitVolume: 0.35
+      defeatSFX:
+        uuid: 13023494228368633677
+        path: assets/audio/sounds/brawler_defeat.ogg
+      defeatVolume: 0.55
   - Entity: 920111
     Name: Red Hammer
     Tag: ""

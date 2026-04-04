@@ -10,6 +10,8 @@ namespace RollABall
         static constexpr const char* ScriptName = "RollABall::PickupSpinner";
 
         float spinSpeedDegrees = 120.0f;
+        Canis::AudioAssetHandle collectSFX = {};
+        float collectVolume = 0.4f;
 
         explicit PickupSpinner(Canis::Entity& _entity) : Canis::ScriptableEntity(_entity) {}
 

@@ -1,6 +1,7 @@
 #include <ExampleStateMachine/BrawlerStateMachine.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/AudioManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 #include <Canis/Debug.hpp>
 
@@ -134,6 +135,10 @@ namespace ExampleStateMachine
         REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, maxHealth);
         REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, logStateChanges);
         REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, hammerVisual);
+        REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, hitSFX);
+        REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, hitVolume);
+        REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, defeatSFX);
+        REGISTER_PROPERTY(brawlerStateMachineConf, ExampleStateMachine::BrawlerStateMachine, defeatVolume);
 
         DEFAULT_CONFIG_AND_REQUIRED(
             brawlerStateMachineConf,
@@ -333,7 +338,10 @@ namespace ExampleStateMachine
             return;
 
         if (BrawlerStateMachine* other = target->GetScript<BrawlerStateMachine>())
+        {
             other->TakeDamage(attackDamage);
+            Canis::AudioManager::PlaySFX(hitSFX, hitVolume);
+        }
     }
 
     void BrawlerStateMachine::TakeDamage(int _damage)
@@ -363,6 +371,7 @@ namespace ExampleStateMachine
         if (logStateChanges)
             Canis::Debug::Log("%s was defeated.", entity.name.c_str());
 
+        Canis::AudioManager::PlaySFX(defeatSFX, defeatVolume);
         entity.Destroy();
     }
 

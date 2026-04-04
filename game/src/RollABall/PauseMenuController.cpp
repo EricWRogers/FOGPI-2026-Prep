@@ -1,6 +1,7 @@
 #include <RollABall/PauseMenuController.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/AudioManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 #include <Canis/InputManager.hpp>
 #include <Canis/Scene.hpp>
@@ -22,6 +23,8 @@ namespace RollABall
     void RegisterPauseMenuControllerScript(Canis::App& _app)
     {
         REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, pauseMenu);
+        REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, uiClickSFX);
+        REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, clickVolume);
 
         DEFAULT_CONFIG_AND_REQUIRED(pauseMenuConf, RollABall::PauseMenuController, Canis::Canvas);
 
@@ -70,6 +73,7 @@ namespace RollABall
             return;
         
         Canis::Canvas& canvas = entity.GetComponent<Canis::Canvas>();
+        (void)canvas;
 
         if (_visible)
         {
@@ -91,6 +95,8 @@ namespace RollABall
             entity.scene.GetWindow().LockMouse(m_restoreMouseLock);
             m_restoreMouseLock = false;
         }
+
+        Canis::AudioManager::PlaySFX(uiClickSFX, clickVolume);
     }
 
     void PauseMenuController::Update(float _dt)

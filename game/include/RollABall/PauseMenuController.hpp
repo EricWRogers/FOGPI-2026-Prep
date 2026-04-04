@@ -14,6 +14,8 @@ namespace RollABall
     public:
         static constexpr const char* ScriptName = "RollABall::PauseMenuController";
         Canis::Entity* pauseMenu = nullptr;
+        Canis::AudioAssetHandle uiClickSFX = {};
+        float clickVolume = 0.45f;
 
         explicit PauseMenuController(Canis::Entity& _entity) : Canis::ScriptableEntity(_entity) {}
 

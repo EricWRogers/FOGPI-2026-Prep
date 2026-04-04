@@ -1,11 +1,9 @@
 #include "../include/Game.hpp"
 
 
-#include <Canis/AssetManager.hpp>
 #include <Canis/App.hpp>
-#include <Canis/Time.hpp>
-#include <Canis/Window.hpp>
-#include <Canis/InputManager.hpp>
+#include <Canis/AudioManager.hpp>
+#include <Canis/Debug.hpp>
 
 #include <RegisterScripts.generated.hpp>
 #include <GameData.hpp>
@@ -29,7 +27,6 @@ extern "C"
         
         app.RegisterInspectorItem(inspectorCreateBall);
         RegisterGeneratedScripts(app);
-        
 
         Canis::Debug::Log("Game initialized!");
         GameData *gameData = new GameData{};
@@ -41,11 +38,17 @@ extern "C"
     {
         Canis::App &app = *(Canis::App *)_app;
         GameData &gameData = *(GameData *)_data;
+        (void)dt;
+        (void)app;
+        (void)gameData;
     }
 
     void GameShutdown(void *_app, void *_data)
     {
         Canis::App &app = *(Canis::App *)_app;
+
+        Canis::AudioManager::StopMusic();
+        Canis::AudioManager::StopAllSounds();
 
         app.UnregisterInspectorItem(inspectorCreateBall);
         UnRegisterGeneratedScripts(app);

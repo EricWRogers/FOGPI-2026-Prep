@@ -1,6 +1,7 @@
 #include <RollABall/PickupSpinner.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/AudioManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 #include <RollABall/PlayerController.hpp>
 
@@ -11,6 +12,8 @@ namespace RollABall
     void RegisterPickupSpinnerScript(App& _app)
     {
         REGISTER_PROPERTY(pickUpConf, RollABall::PickupSpinner, spinSpeedDegrees);
+        REGISTER_PROPERTY(pickUpConf, RollABall::PickupSpinner, collectSFX);
+        REGISTER_PROPERTY(pickUpConf, RollABall::PickupSpinner, collectVolume);
 
         DEFAULT_CONFIG_AND_REQUIRED(pickUpConf, RollABall::PickupSpinner, Transform);
 
@@ -79,6 +82,7 @@ namespace RollABall
 
         if (PlayerController* playerController = collectingPlayer->GetScript<PlayerController>())
         {
+            Canis::AudioManager::PlaySFX(collectSFX, collectVolume);
             playerController->CollectPickup();
             entity.Destroy();
         }

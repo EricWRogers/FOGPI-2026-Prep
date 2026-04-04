@@ -1,6 +1,7 @@
 #include <RollABall/BoostPad.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/AudioManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 #include <RollABall/PlayerController.hpp>
 
@@ -13,6 +14,8 @@ namespace RollABall
         REGISTER_PROPERTY(boostPadConf, RollABall::BoostPad, yeetForce);
         REGISTER_PROPERTY(boostPadConf, RollABall::BoostPad, player);
         REGISTER_PROPERTY(boostPadConf, RollABall::BoostPad, ground);
+        REGISTER_PROPERTY(boostPadConf, RollABall::BoostPad, boostSFX);
+        REGISTER_PROPERTY(boostPadConf, RollABall::BoostPad, boostVolume);
 
         DEFAULT_CONFIG_AND_REQUIRED(boostPadConf, RollABall::BoostPad, Transform, BoxCollider);
 
@@ -38,32 +41,46 @@ namespace RollABall
 
     void BoostPad::Ready() {
         player = entity.scene.FindEntityWithName("Player");
+        m_playerWasOverlapping = false;
     }
 
     void BoostPad::Destroy() {}
 
     void BoostPad::Update(float _dt)
     {
+        (void)_dt;
         CheckSensorEnter();
     }
 
     void BoostPad::CheckSensorEnter()
     {
         if (!entity.HasComponents<BoxCollider,Rigidbody>())
+        {
+            m_playerWasOverlapping = false;
             return;
+        }
 
-        Entity* collectingPlayer = nullptr;
+        bool playerOverlapping = false;
 
         for (Entity* other : entity.GetComponent<BoxCollider>().entered)
         {
-            if (!other->active)
+            if (other == nullptr || !other->active)
                 continue;
 
-            if (other->HasScript<RollABall::PlayerController>()) {
-                Rigidbody& playerRigidbody = other->GetComponent<Rigidbody>();
-                playerRigidbody.AddForce(Vector3(0.0f, yeetForce, 0.0f), Rigidbody3DForceMode::IMPULSE);
+            if (other->HasScript<RollABall::PlayerController>() && other->HasComponent<Rigidbody>())
+            {
+                playerOverlapping = true;
+
+                if (!m_playerWasOverlapping)
+                {
+                    Rigidbody& playerRigidbody = other->GetComponent<Rigidbody>();
+                    playerRigidbody.AddForce(Vector3(0.0f, yeetForce, 0.0f), Rigidbody3DForceMode::IMPULSE);
+                    Canis::AudioManager::PlaySFX(boostSFX, boostVolume);
+                }
                 break;
             }
         }
+
+        m_playerWasOverlapping = playerOverlapping;
     }
 }

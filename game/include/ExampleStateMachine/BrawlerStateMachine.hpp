@@ -65,6 +65,10 @@ namespace ExampleStateMachine
         int maxHealth = 40;
         bool logStateChanges = true;
         Canis::Entity* hammerVisual = nullptr;
+        Canis::AudioAssetHandle hitSFX = {};
+        float hitVolume = 0.35f;
+        Canis::AudioAssetHandle defeatSFX = {};
+        float defeatVolume = 0.55f;
 
         explicit BrawlerStateMachine(Canis::Entity& _entity);
 
