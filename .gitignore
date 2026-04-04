@@ -9,6 +9,7 @@ build
 project/*
 !project/assets/
 !project/assets/**
+!project/project_settings/
 .vscode
 *.zip
 __cmake_systeminformation

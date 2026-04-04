@@ -1,0 +1,17 @@
+useFrameLimit: true
+frameLimit: 30
+frameLimitEditor: 30
+overrideSeed: false
+seed: 0
+volume: 1
+musicVolume: 1
+sfxVolume: 1
+mute: true
+editor: true
+syncMode: 0
+iconUUID: 8708093225096235882
+launchScene: 18358078127499100431
+editorWindowWidth: 1280
+editorWindowHeight: 752
+targetGameWidth: 512
+targetGameHeight: 512

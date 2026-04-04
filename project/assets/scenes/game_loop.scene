@@ -705,6 +705,8 @@ Entities:
     Canis::Canvas:
       active: true
       renderMode: 0
+      scaleMode: 1
+      screenSize: [1280, 800]
     Canis::RectTransform:
       active: true
       position: [0, 0]
@@ -784,7 +786,7 @@ Entities:
     Canis::RectTransform:
       active: true
       position: [0, 58]
-      size: [91, 33]
+      size: [90.99999, 33]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
@@ -908,7 +910,7 @@ Entities:
     Canis::RectTransform:
       active: true
       position: [0, 0]
-      size: [44, 28]
+      size: [43.999996, 28]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
