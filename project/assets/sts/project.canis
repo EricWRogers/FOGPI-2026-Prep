@@ -1,0 +1,17 @@
+fullscreen true
+--borderless--will--override--resizeable
+borderless false
+resizeable true
+width 1280
+heigth 720
+use_frame_limit false
+frame_limit 120
+override_seed false
+seed 0
+volume-can-range-from-0.0-1.5
+volume 1.0
+log true
+logToFile false
+editor false
+vsync false
+demo false

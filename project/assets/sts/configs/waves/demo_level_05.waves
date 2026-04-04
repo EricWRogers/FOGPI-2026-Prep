@@ -1,0 +1,17 @@
+delay-is-the-time-between-spawning
+0-green-slime
+1-blue-slime
+2-purple-slime
+3-orange-slime
+-1-is-the-end-of-array
+waves
+delay 2.0
+enemies 6 1 1 1 6 -1
+delay 1.1
+enemies 0 0 0 1 0 6 0 1 0 0 1 -1
+delay 0.8
+enemies 0 0 1 0 0 6 0 6 0 1 0 1 1 0 6 1 6 2 2 -1
+delay 0.8
+enemies 0 0 0 1 1 1 2 6 2 6 2 3 -1
+delay 0.8
+enemies 0 0 0 1 6 1 6 2 2 2 6 3 3 -1

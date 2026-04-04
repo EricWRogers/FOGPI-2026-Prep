@@ -1,0 +1,49 @@
+Scene: splash_screen
+RenderSystems:
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 957295594718324809
+    Name: Camera
+    Canis::Camera2DComponent:
+      position: [0.0, 0.0]
+      scale: 1.0
+    Canis::ScriptComponent: DebugCamera2D
+  - Entity: 857295594718324809
+    Name: Background
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/title_background.png
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0.0, 0.0]
+      size: [1280.0, 800.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.5
+      scaleWithScreen: 1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::ScriptComponent: SplashLoader
+  - Entity: 857295594718324809
+    Name: Title
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/title_image.png
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [0.0, 0.0]
+      size: [700.0, 700.0]
+      originOffset: [120.0, -600.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.0
+      scaleWithScreen: 1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 0.0]
+    Canis::ScriptComponent: FadeColorIn
+    

@@ -1,0 +1,463 @@
+Environment:
+  ClearColor:
+  - 0.04
+  - 0.05
+  - 0.08
+  - 1.0
+Entities:
+- Entity: 9200000000000000005
+  Name: Canvas
+  Tag: ''
+  Canis::Canvas:
+    active: true
+    renderMode: 0
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 0.0
+    size:
+    - 0.0
+    - 0.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin:
+    - 0.0
+    - 0.0
+    anchorMax:
+    - 1.0
+    - 1.0
+    pivot:
+    - 0.5
+    - 0.5
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 0
+    children:
+    - 9100000000000000003
+    - 9100000000000000004
+    - 9100000000000000005
+    - 9100000000000000006
+    - 9100000000000000007
+    - 9100000000000000008
+    - 9100000000000000009
+    - 9100000000000000010
+- Entity: 9100000000000000001
+  Name: Demo Camera
+  Tag: ''
+  Canis::Camera2D:
+    position:
+    - 0.0
+    - 0.0
+    scale: 1.0
+- Entity: 9100000000000000002
+  Name: Gameplay Controller
+  Tag: ''
+  StopTheSlimes::GameplaySceneController: {}
+- Entity: 9100000000000000003
+  Name: Background
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 0.0
+    size:
+    - 1280.0
+    - 800.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id001
+    - 0.0
+    - 0.0
+    anchorMax: *id001
+    pivot: *id001
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 2.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    uv:
+    - 0.0
+    - 0.0
+    - 1.0
+    - 1.0
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/title_background.png
+- Entity: 9100000000000000004
+  Name: World Title
+  Tag: WORLD_TITLE
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 260.0
+    size:
+    - 800.0
+    - 60.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id002
+    - 0.5
+    - 0.5
+    anchorMax: *id002
+    pivot: *id002
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Stop The Slimes
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 48
+- Entity: 9100000000000000005
+  Name: Level Path
+  Tag: LEVEL_PATH
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 10.0
+    size:
+    - 980.0
+    - 40.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id003
+    - 0.5
+    - 0.5
+    anchorMax: *id003
+    pivot: *id003
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: assets/sts/configs/levels/demo_rouge_light_level_01.config
+    color:
+    - 0.85
+    - 0.92
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 22
+- Entity: 9100000000000000006
+  Name: Level Details
+  Tag: LEVEL_DETAILS
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - -120.0
+    size:
+    - 900.0
+    - 190.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id004
+    - 0.5
+    - 0.5
+    anchorMax: *id004
+    pivot: *id004
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Loading level summary...
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 28
+- Entity: 9100000000000000007
+  Name: Help Text
+  Tag: HELP_TEXT
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - -270.0
+    size:
+    - 980.0
+    - 90.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id005
+    - 0.5
+    - 0.5
+    anchorMax: *id005
+    pivot: *id005
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Loading instructions...
+    color:
+    - 0.9
+    - 0.95
+    - 0.9
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 20
+- Entity: 9100000000000000008
+  Name: Back To Map
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -260.0
+    - 170.0
+    size:
+    - 210.0
+    - 44.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id006
+    - 0.5
+    - 0.0
+    anchorMax: *id006
+    pivot: *id006
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Back To Map
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 32
+  Canis::UIButton:
+    active: true
+    targetEntity: 9100000000000000002
+    targetScript: StopTheSlimes::GameplaySceneController
+    actionName: OnClickBackToMap
+    baseColor:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    hoverColor:
+    - 0.26
+    - 0.9
+    - 0.38
+    - 1.0
+    pressedColor:
+    - 0.85
+    - 0.85
+    - 0.85
+    - 1.0
+    baseScale: 1.0
+    hoverScale: 1.1
+    pressedScale: 0.98
+- Entity: 9100000000000000009
+  Name: Simulate Win
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 170.0
+    size:
+    - 220.0
+    - 44.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id007
+    - 0.5
+    - 0.0
+    anchorMax: *id007
+    pivot: *id007
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Simulate Win
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 32
+  Canis::UIButton:
+    active: true
+    targetEntity: 9100000000000000002
+    targetScript: StopTheSlimes::GameplaySceneController
+    actionName: OnClickSimulateWin
+    baseColor:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    hoverColor:
+    - 0.26
+    - 0.9
+    - 0.38
+    - 1.0
+    pressedColor:
+    - 0.85
+    - 0.85
+    - 0.85
+    - 1.0
+    baseScale: 1.0
+    hoverScale: 1.1
+    pressedScale: 0.98
+- Entity: 9100000000000000010
+  Name: Simulate Loss
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 260.0
+    - 170.0
+    size:
+    - 230.0
+    - 44.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id008
+    - 0.5
+    - 0.0
+    anchorMax: *id008
+    pivot: *id008
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000005
+    children: []
+  Canis::Text:
+    text: Simulate Loss
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 32
+  Canis::UIButton:
+    active: true
+    targetEntity: 9100000000000000002
+    targetScript: StopTheSlimes::GameplaySceneController
+    actionName: OnClickSimulateLoss
+    baseColor:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    hoverColor:
+    - 0.26
+    - 0.9
+    - 0.38
+    - 1.0
+    pressedColor:
+    - 0.85
+    - 0.85
+    - 0.85
+    - 1.0
+    baseScale: 1.0
+    hoverScale: 1.1
+    pressedScale: 0.98

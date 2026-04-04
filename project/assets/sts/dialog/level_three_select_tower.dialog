@@ -1,0 +1,5 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "You can gain more control over your towers by selecting them with [right-click] or (X)."

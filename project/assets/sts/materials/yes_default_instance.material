@@ -1,0 +1,5 @@
+shader: assets/sts/shaders/shadow_mapping_instance
+albedo: assets/sts/textures/palette/yes_diffuse_v2.png
+specular: assets/sts/textures/palette/yes_specular.png
+emission: assets/sts/textures/palette/yes_emission.png
+backFaceCulling: true

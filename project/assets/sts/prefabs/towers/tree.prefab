@@ -1,0 +1,13 @@
+Entities:
+  - Entity: 10
+    Canis::Transform:
+      active: true
+      position: [0.0, -0.5, 0.0]
+    Canis::Mesh:
+      modelPath: "assets/sts/models/towers/tree_tower.obj"
+      castShadow: true
+      materialPath: "assets/sts/materials/default.material"
+    Canis::Color:
+    Canis::SphereCollider:
+      radius: 1.0
+    TowerBuffComponent:

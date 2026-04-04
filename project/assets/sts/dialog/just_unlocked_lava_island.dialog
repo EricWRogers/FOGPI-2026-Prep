@@ -1,0 +1,5 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "An ENDLESS Onslaught of Slimes will start Soon!"

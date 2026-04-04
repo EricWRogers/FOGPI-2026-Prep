@@ -1,0 +1,8 @@
+shader: assets/sts/shaders/water
+albedo: assets/sts/textures/palette/yes_diffuse.png
+specular: assets/sts/textures/palette/yes_specular.png
+emission: assets/sts/textures/palette/yes_emission.png
+NOISE: assets/sts/textures/noise.png
+screen: true
+depth: true
+backFaceCulling: true

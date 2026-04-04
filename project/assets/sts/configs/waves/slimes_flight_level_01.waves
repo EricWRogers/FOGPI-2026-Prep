@@ -1,0 +1,14 @@
+delay-is-the-time-between-spawning
+0-green-slime
+1-blue-slime
+2-purple-slime
+3-orange-slime
+4-forest-boss-slime
+5-dragon-rider
+6-frog-slime
+-1-is-the-end-of-array
+waves
+delay 1.2
+enemies 0 0 0 5 -1
+delay 1.1
+enemies 0 0 0 1 5 0 0 0 1 5 -1

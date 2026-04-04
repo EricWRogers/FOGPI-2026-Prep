@@ -1,0 +1,6 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "Build your Deck! You can only carry a limited number of card with you in your Deck to this level."
+  - "Save extra cards to the Collection for later. Move cards by [left-click] or (A)."

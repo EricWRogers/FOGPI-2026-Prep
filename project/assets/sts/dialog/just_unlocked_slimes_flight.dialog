@@ -1,0 +1,6 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "Great Job you cleared the Forest Slime Boss!"
+  - "Beware the Slimes have taken to flight!."

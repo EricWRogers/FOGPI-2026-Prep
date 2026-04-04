@@ -1,0 +1,154 @@
+Environment:
+  ClearColor:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 1.0
+Entities:
+- Entity: 9200000000000000009
+  Name: Canvas
+  Tag: ''
+  Canis::Canvas:
+    active: true
+    renderMode: 0
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 0.0
+    size:
+    - 0.0
+    - 0.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin:
+    - 0.0
+    - 0.0
+    anchorMax:
+    - 1.0
+    - 1.0
+    pivot:
+    - 0.5
+    - 0.5
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 0
+    children:
+    - 10964180172997595822
+    - 6947501218716067
+- Entity: 10964180172997595822
+  Name: Main Menu Button
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0
+    - 100
+    size:
+    - 199
+    - 44
+    scale:
+    - 1
+    - 1
+    anchorMin: &id001
+    - 0.5
+    - 0.0
+    anchorMax: *id001
+    pivot: *id001
+    originOffset:
+    - -99.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000009
+    children: []
+  Canis::Text:
+    text: Main Menu
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 48
+  Canis::UIButton:
+    active: true
+    targetEntity: 10964180172997595822
+    targetScript: StopTheSlimes::MainMenuButton
+    actionName: OnClickMainMenu
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.262745112
+    - 0.90196079
+    - 0.376470596
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1
+    pressedScale: 0.98
+  StopTheSlimes::MainMenuButton: {}
+- Entity: 6947501218716067
+  Name: OnClick
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 100.0
+    size:
+    - 512.0
+    - 512.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin: &id002
+    - 0.0
+    - 0.0
+    anchorMax: *id002
+    pivot: *id002
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 9200000000000000009
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    uv:
+    - 0.0
+    - 0.0
+    - 1.0
+    - 1.0
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/qr_code.png

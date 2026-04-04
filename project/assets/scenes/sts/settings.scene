@@ -1,0 +1,1112 @@
+Environment:
+  ClearColor:
+  - 0
+  - 0
+  - 0
+  - 1
+Entities:
+- Entity: 9200000000000000010
+  Name: Canvas
+  Tag: ''
+  Canis::Canvas:
+    active: true
+    renderMode: 0
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0.0
+    - 0.0
+    size:
+    - 0.0
+    - 0.0
+    scale:
+    - 1.0
+    - 1.0
+    anchorMin:
+    - 0.0
+    - 0.0
+    anchorMax:
+    - 1.0
+    - 1.0
+    pivot:
+    - 0.5
+    - 0.5
+    originOffset:
+    - 0.0
+    - 0.0
+    depth: 0.0
+    rotation: 0.0
+    rotationOriginOffset:
+    - 0.0
+    - 0.0
+    parent: 0
+    children:
+    - 17066065208811643397
+    - 4106830962677677653
+    - 17168992724052586822
+    - 12796469468752291547
+    - 8654966523642379780
+    - 2344481155143177863
+    - 18157705265959231571
+    - 14593809605141225925
+    - 17089595310751289827
+    - 2077586153546402566
+    - 12367033300463784037
+    - 9839353793554682102
+    - 10211751857141529065
+    - 17697694382629280308
+    - 83084053693434936
+    - 39499604828784431
+    - 12298532829733529001
+    - 6874964142798879689
+    - 14075705757990251268
+    - 10964180172997595822
+- Entity: 17066065208811643397
+  Name: Title
+  Tag: MasterVolumeKnob
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0
+    - -100
+    size:
+    - 151
+    - 44
+    scale:
+    - 1
+    - 1
+    anchorMin: &id001
+    - 0.5
+    - 1.0
+    anchorMax: *id001
+    pivot: *id001
+    originOffset:
+    - -75.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Settings
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 48
+- Entity: 4106830962677677653
+  Name: Master Volume Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - 150
+    size:
+    - 201
+    - 32
+    scale:
+    - 1
+    - 1
+    anchorMin: &id002
+    - 0.5
+    - 0.5
+    anchorMax: *id002
+    pivot: *id002
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Master Volume
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 17168992724052586822
+  Name: Master Volume Slider
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 200
+    - 150
+    size:
+    - 150
+    - 30
+    scale:
+    - 1
+    - 1
+    anchorMin: &id003
+    - 0.5
+    - 0.5
+    anchorMax: *id003
+    pivot: *id003
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0.333000004
+    - 1
+    - 0.333000004
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/bar.png
+- Entity: 12796469468752291547
+  Name: Master Volume Slider Knob
+  Tag: MasterVolumeKnob
+  Canis::RectTransform:
+    active: true
+    position:
+    - 325
+    - 140
+    size:
+    - 50
+    - 50
+    scale:
+    - 1
+    - 1
+    anchorMin: &id004
+    - 0.5
+    - 0.5
+    anchorMax: *id004
+    pivot: *id004
+    originOffset:
+    - 0
+    - 0
+    depth: 0
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0
+    - 1
+    - 1
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/energy_icon.png
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickMasterVolume
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 1
+    - 1
+    - 1
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 8654966523642379780
+  Name: Music Volume Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - 100
+    size:
+    - 187
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id005
+    - 0.5
+    - 0.5
+    anchorMax: *id005
+    pivot: *id005
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Music Volume
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 2344481155143177863
+  Name: Music Volume Slider
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 200
+    - 100
+    size:
+    - 150
+    - 30
+    scale:
+    - 1
+    - 1
+    anchorMin: &id006
+    - 0.5
+    - 0.5
+    anchorMax: *id006
+    pivot: *id006
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0.333000004
+    - 1
+    - 0.333000004
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/bar.png
+- Entity: 18157705265959231571
+  Name: Music Volume Slider Knob
+  Tag: MusicVolumeKnob
+  Canis::RectTransform:
+    active: true
+    position:
+    - 325
+    - 90
+    size:
+    - 50
+    - 50
+    scale:
+    - 1
+    - 1
+    anchorMin: &id007
+    - 0.5
+    - 0.5
+    anchorMax: *id007
+    pivot: *id007
+    originOffset:
+    - 0
+    - 0
+    depth: 0
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0
+    - 1
+    - 1
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/energy_icon.png
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickMusicVolume
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 1
+    - 1
+    - 1
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 14593809605141225925
+  Name: SFX Volume Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - 50
+    size:
+    - 153
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id008
+    - 0.5
+    - 0.5
+    anchorMax: *id008
+    pivot: *id008
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: SFX Volume
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 17089595310751289827
+  Name: SFX Volume Slider
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 200
+    - 50
+    size:
+    - 150
+    - 30
+    scale:
+    - 1
+    - 1
+    anchorMin: &id009
+    - 0.5
+    - 0.5
+    anchorMax: *id009
+    pivot: *id009
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0.333000004
+    - 1
+    - 0.333000004
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/bar.png
+- Entity: 2077586153546402566
+  Name: SFX Volume Slider Knob
+  Tag: SFXVolumeKnob
+  Canis::RectTransform:
+    active: true
+    position:
+    - 325
+    - 40
+    size:
+    - 50
+    - 50
+    scale:
+    - 1
+    - 1
+    anchorMin: &id010
+    - 0.5
+    - 0.5
+    anchorMax: *id010
+    pivot: *id010
+    originOffset:
+    - 0
+    - 0
+    depth: 0
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Sprite2D:
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    uv:
+    - 0
+    - 0
+    - 1
+    - 1
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/energy_icon.png
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickSFXVolume
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 1
+    - 1
+    - 1
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 12367033300463784037
+  Name: VSync Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - 0
+    size:
+    - 81
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id011
+    - 0.5
+    - 0.5
+    anchorMax: *id011
+    pivot: *id011
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: VSync
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 9839353793554682102
+  Name: VSync Button
+  Tag: VSyncButton
+  Canis::RectTransform:
+    active: true
+    position:
+    - 275
+    - 0
+    size:
+    - 44
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id012
+    - 0.5
+    - 0.5
+    anchorMax: *id012
+    pivot: *id012
+    originOffset:
+    - -22
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: false
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickVSync
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.263000011
+    - 0.90200001
+    - 0.375999987
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 10211751857141529065
+  Name: FPS Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - -50
+    size:
+    - 133
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id013
+    - 0.5
+    - 0.5
+    anchorMax: *id013
+    pivot: *id013
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: FPS Target
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 17697694382629280308
+  Name: FPS Button
+  Tag: FPSButton
+  Canis::RectTransform:
+    active: true
+    position:
+    - 275
+    - -50
+    size:
+    - 33
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id014
+    - 0.5
+    - 0.5
+    anchorMax: *id014
+    pivot: *id014
+    originOffset:
+    - -16.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: 30
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickFPS
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.263000011
+    - 0.90200001
+    - 0.375999987
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 83084053693434936
+  Name: Shadow Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - -100
+    size:
+    - 208
+    - 38
+    scale:
+    - 1
+    - 1
+    anchorMin: &id015
+    - 0.5
+    - 0.5
+    anchorMax: *id015
+    pivot: *id015
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Shadow Quality
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 39499604828784431
+  Name: Shadow Button
+  Tag: ShadowButton
+  Canis::RectTransform:
+    active: true
+    position:
+    - 275
+    - -100
+    size:
+    - 109
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id016
+    - 0.5
+    - 0.5
+    anchorMax: *id016
+    pivot: *id016
+    originOffset:
+    - -54.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Medium
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickShadow
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.263000011
+    - 0.90200001
+    - 0.375999987
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 12298532829733529001
+  Name: Ocean Detials Label
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -400
+    - -150
+    size:
+    - 185
+    - 33
+    scale:
+    - 1
+    - 1
+    anchorMin: &id017
+    - 0.5
+    - 0.5
+    anchorMax: *id017
+    pivot: *id017
+    originOffset:
+    - 0
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Ocean Detials
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+- Entity: 6874964142798879689
+  Name: Ocean Detials Button
+  Tag: OceanDetailsButton
+  Canis::RectTransform:
+    active: true
+    position:
+    - 275
+    - -150
+    size:
+    - 62
+    - 32
+    scale:
+    - 1
+    - 1
+    anchorMin: &id018
+    - 0.5
+    - 0.5
+    anchorMax: *id018
+    pivot: *id018
+    originOffset:
+    - -31
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Ultra
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 36
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickOceanDetails
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.263000011
+    - 0.90200001
+    - 0.375999987
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1.10000002
+    pressedScale: 0.98
+- Entity: 14075705757990251268
+  Name: Credits Button
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0
+    - 175
+    size:
+    - 127
+    - 44
+    scale:
+    - 1
+    - 1
+    anchorMin: &id019
+    - 0.5
+    - 0.0
+    anchorMax: *id019
+    pivot: *id019
+    originOffset:
+    - -63.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Credits
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 48
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: OnClickCredits
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.263000011
+    - 0.90200001
+    - 0.375999987
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1
+    pressedScale: 0.98
+- Entity: 10964180172997595822
+  Name: Main Menu Button
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 0
+    - 100
+    size:
+    - 199
+    - 44
+    scale:
+    - 1
+    - 1
+    anchorMin: &id020
+    - 0.5
+    - 0.0
+    anchorMax: *id020
+    pivot: *id020
+    originOffset:
+    - -99.5
+    - 0
+    depth: 1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 9200000000000000010
+    children: []
+  Canis::Text:
+    text: Main Menu
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 2
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 48
+  Canis::UIButton:
+    active: true
+    targetEntity: 11620874555246173275
+    targetScript: StopTheSlimes::SettingsMenuController
+    actionName: Main_Menu_Button
+    baseColor:
+    - 0.899999976
+    - 0.899999976
+    - 0.899999976
+    - 1
+    hoverColor:
+    - 0.262745112
+    - 0.90196079
+    - 0.376470596
+    - 1
+    pressedColor:
+    - 0.7649999796
+    - 0.7649999796
+    - 0.7649999796
+    - 1
+    baseScale: 1
+    hoverScale: 1
+    pressedScale: 0.98
+- Entity: 11620874555246173275
+  Name: Settings Menu Functions
+  Tag: ''
+  StopTheSlimes::SettingsMenuController: {}

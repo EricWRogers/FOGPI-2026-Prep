@@ -1,0 +1,41 @@
+Environment:
+  ClearColor:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 1.0
+Entities:
+- Entity: 1
+  Name: ''
+  Tag: ''
+  Canis::Transform:
+    active: true
+    position:
+    - 12.5
+    - 0.0
+    - 12.5
+    rotation:
+    - 0.0
+    - 0.0
+    - 0.0
+    scale:
+    - 2.5
+    - 1.0
+    - 2.5
+    parent: 0
+    children: []
+  Canis::SphereCollider:
+    active: true
+    radius: 100.0
+  Canis::Model:
+    color: &id001
+    - 0.0
+    - 0.3
+    - 0.8
+    - 0.6
+    ModelAsset:
+      path: assets/sts/models/water.obj
+  Canis::Material:
+    color: *id001
+    MaterialAsset:
+      path: assets/sts/materials/water.material

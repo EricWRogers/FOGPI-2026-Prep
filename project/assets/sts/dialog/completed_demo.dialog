@@ -1,0 +1,5 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "Congratulations!!!  General you have cleard the training course."

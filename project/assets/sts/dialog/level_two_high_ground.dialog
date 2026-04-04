@@ -1,0 +1,6 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "Some of our new towers you are using can take advantage of the high ground."
+  - "Give it a try!"

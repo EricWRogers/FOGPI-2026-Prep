@@ -1,0 +1,9 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "General the evil Slimes have taken for the Skeleton Kingdom"
+  - "They want our BONES!"
+  - "You must Stop The Slimes!"
+  - "Free the skeletons!"
+  - "And save our land!"

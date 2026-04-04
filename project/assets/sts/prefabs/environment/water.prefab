@@ -1,0 +1,15 @@
+Entities:
+  - Entity: 1
+    Canis::Transform:
+      active: true
+      position: [12.5, 0.0, 12.5]
+      scale: [2.5, 1.0, 2.5]
+    Canis::Mesh:
+      modelPath: "assets/sts/models/water.obj"
+      castShadow: false
+      castDepth: false
+      materialPath: "assets/sts/materials/water.material"
+    Canis::Color:
+        color: [0.0, 0.3, 0.8, 0.6]
+    Canis::SphereCollider:
+      radius: 100.0

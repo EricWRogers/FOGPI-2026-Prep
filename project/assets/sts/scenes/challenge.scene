@@ -1,0 +1,781 @@
+Scene: challenge
+ClearColor: [0, 0, 0, 1]
+Systems:
+  - Canis::ButtonSystem
+RenderSystems:
+  - Canis::RenderMeshSystem
+  - Canis::SpriteRenderer2DSystem
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 2516947501218716067
+    Name: ChallengeSuperObject
+    Canis::ScriptComponent: Challenge
+  - Entity: 16416297353335535662
+    Name: DirectionalLight
+    Canis::TagComponent: DIRECTIONLIGHT
+    Canis::Transform:
+      active: true
+      position: [0, 30, 30]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+    Canis::DirectionalLight:
+      direction: [0.336861, -0.842152, -0.421076]
+      ambient: [0.1, 0.1, 0.1]
+      diffuse: [0.961, 0.953, 0.863]
+      specular: [0.6, 0.6, 0.6]
+  - Entity: 9073877394109962344
+    Name: QuestionMark 0
+    Canis::TagComponent: Q0
+    Canis::Transform:
+      active: false
+      position: [11.5, 0.5, 14]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 5543214108425261460
+    Name: QuestionMark 1
+    Canis::TagComponent: Q1
+    Canis::Transform:
+      active: true
+      position: [11.5, 0.5, 54]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 14405537189917772963
+    Name: QuestionMark 2
+    Canis::TagComponent: Q2
+    Canis::Transform:
+      active: true
+      position: [11.5, 0.5, 94]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 14390388357021922628
+    Name: QuestionMark 3
+    Canis::TagComponent: Q3
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 94]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 10261203364196943030
+    Name: QuestionMark 4
+    Canis::TagComponent: Q4
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 54]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 18357182262160254259
+    Name: QuestionMark 5
+    Canis::TagComponent: Q5
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 14]
+      rotation: [0, -0, 0]
+      scale: [3, 3, 3]
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::SphereCollider:
+      center: [0, 0, 0]
+      radius: 1
+      layer: 0
+      mask: 0
+    Canis::Mesh:
+      modelPath: assets/sts/models/environment/question_mark.obj
+      materialPath: assets/sts/materials/default.material
+      castShadow: false
+      useInstance: false
+      castDepth: true
+  - Entity: 15542344841898700423
+    Name: Right Arrow
+    Canis::TagComponent: RIGHT_ARROW
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 5
+      position: [-386.25, -37.5]
+      size: [52.999973, 75.000374]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [26.5, 37.5]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/right_arrow_button.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickChallengeRight
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      action: 0
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.1
+      up: 0
+      down: 0
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 12197991084070871116
+    Name: Quest 3 Text
+    Canis::TagComponent: QUEST_3_TEXT
+    Canis::Color:
+      color: [0.82, 0.973, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [23, -205]
+      size: [180, 15]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::TextComponent:
+      text: Victory without losing Health
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 16
+  - Entity: 17692328406333038100
+    Name: Quest 3 Check
+    Canis::TagComponent: QUEST_3_CHECK
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-60, -205]
+      size: [20, 20]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/check_box.png
+      uv: [0, 0, 1, 1]
+  - Entity: 14446542523008083388
+    Name: Quest 3 X
+    Canis::TagComponent: QUEST_3_X
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-58, -203]
+      size: [16, 16]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/x_mark.png
+      uv: [0, 0, 1, 1]
+  - Entity: 8067537025978682423
+    Name: Left Arrow
+    Canis::TagComponent: LEFT_ARROW
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 3
+      position: [27.5, -37.5]
+      size: [55, 76]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/left_arrow_button.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickChallengeLeft
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      action: 0
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.1
+      up: 0
+      down: 0
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 4979503114445751493
+    Name: Quest Panel
+    Canis::TagComponent: QUEST
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 5
+      position: [-319, -344.5]
+      size: [309, 689]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: [8885453741316286307, 2478961397421072626, 1433106256365409369, 16950774635683120090, 15260304597076073590, 11145315590339422726]
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/quest_panel.png
+      uv: [0, 0, 1, 1]
+  - Entity: 11548122720569067986
+    Name: Dialog
+    Canis::TagComponent: DIALOG
+    Canis::Color:
+      color: [0.2, 0.2, 0.2, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: false
+      anchor: 6
+      position: [40, 40]
+      size: [1200, 250]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: [11686541764204569804, 8988835732786732145]
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/white_panel.png
+      uv: [0, 0, 1, 1]
+    Canis::ScriptComponent: Dialog
+  - Entity: 8885453741316286307
+    Name: Quest Title
+    Canis::TagComponent: QUEST_TITLE
+    Canis::Color:
+      color: [0.82, 0.973, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 1
+      position: [0, -60]
+      size: [81, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-40.5, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: ~
+    Canis::TextComponent:
+      text: QUESTS
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 32
+  - Entity: 2478961397421072626
+    Name: Score
+    Canis::TagComponent: HIGH_SCORE
+    Canis::Color:
+      color: [0.82, 0.973, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 1
+      position: [0, -88]
+      size: [68, 21]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-34, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: ~
+    Canis::TextComponent:
+      text: "Score: 0"
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 22
+  - Entity: 1433106256365409369
+    Name: Dash Line
+    Canis::TagComponent: DASH_LINE
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 1
+      position: [-135, -109]
+      size: [259, 13]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/dash_line.png
+      uv: [0, 0, 1, 1]
+  - Entity: 6442295437872337223
+    Name: Quest 1 Text
+    Canis::TagComponent: QUEST_1_TEXT
+    Canis::Color:
+      color: [0.82, 0.973, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [24, -135]
+      size: [51, 15]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::TextComponent:
+      text: Victory!!
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 16
+  - Entity: 2106403046281659146
+    Name: Quest 1 Check
+    Canis::TagComponent: QUEST_1_CHECK
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-60, -135]
+      size: [20, 20]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/check_box.png
+      uv: [0, 0, 1, 1]
+  - Entity: 8480683032190908718
+    Name: Quest 1 X
+    Canis::TagComponent: QUEST_1_X
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-58, -133]
+      size: [16, 16]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/x_mark.png
+      uv: [0, 0, 1, 1]
+  - Entity: 11727301125121346899
+    Name: Quest 2 Text
+    Canis::TagComponent: QUEST_2_TEXT
+    Canis::Color:
+      color: [0.82, 0.973, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [24, -170]
+      size: [208, 15]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::TextComponent:
+      text: Victory without using a Fire Tower
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 16
+  - Entity: 8942105713739368679
+    Name: Quest 2 Check
+    Canis::TagComponent: QUEST_2_CHECK
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-60, -170]
+      size: [20, 20]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/check_box.png
+      uv: [0, 0, 1, 1]
+  - Entity: 7729217397873293050
+    Name: Quest 2 X
+    Canis::TagComponent: QUEST_2_X
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [-58, -168]
+      size: [16, 16]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -2
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/x_mark.png
+      uv: [0, 0, 1, 1]
+  - Entity: 15260304597076073590
+    Name: Continue
+    Canis::TagComponent: CONTINUE
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 80.000015]
+      size: [43, 25]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-21.5, 0]
+      rotation: -0
+      scale: 1
+      depth: -0.1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: ~
+    Canis::TextComponent:
+      text: Play
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28
+    Canis::ButtonComponent:
+      eventName: OnClickChallengeContinue
+      baseColor: [0.82, 0.973, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.1
+      up: 11145315590339422726
+      down: 11145315590339422726
+      left: 0
+      right: 0
+      defaultSelected: true
+  - Entity: 11145315590339422726
+    Name: MainMenu
+    Canis::TagComponent: C
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 40]
+      size: [116, 26]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-58, 0]
+      rotation: 0
+      scale: 1
+      depth: -0.1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: ~
+    Canis::TextComponent:
+      text: Main Menu
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28
+    Canis::ButtonComponent:
+      eventName: OnClickMainMenu
+      baseColor: [0.82, 0.973, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.1
+      up: 15260304597076073590
+      down: 15260304597076073590
+      left: 0
+      right: 0
+      defaultSelected: false
+    Canis::ScriptComponent: MainMenuButton
+  - Entity: 16950774635683120090
+    Name: CheckList
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0, 0]
+      size: [309, 689]
+      inheritWidth: true
+      inheritHeight: true
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children: [6442295437872337223, 2106403046281659146, 8480683032190908718, 11727301125121346899, 8942105713739368679, 7729217397873293050, 12197991084070871116, 17692328406333038100, 14446542523008083388]
+  - Entity: 11686541764204569804
+    Name: Dialog Text
+    Canis::TagComponent: ""
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [30.99997, -43.999924]
+      size: [1050, 24]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children: ~
+    Canis::TextComponent:
+      text: In the beginning, God created the heavens and the earth. 2 The earth was without form and void, and darkness was over the face of the deep. And the Spirit of God was hovering over the face of the waters.3 And God said, “Let there be light,” and there was light. 4 And God saw that the light was good. And God separated the light from the darkness. 5 God called the light Day, and the darkness he called Night. And there was evening and there was morning, the first day.
+      alignment: 0
+      horizontalBoundary: 1
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28
+  - Entity: 8988835732786732145
+    Name: Dialog Continue
+    Canis::TagComponent: ""
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 8
+      position: [-20, 20]
+      size: [140, 27]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-140, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children: ~
+    Canis::TextComponent:
+      text: "[SPACE] or (A)"
+      alignment: 1
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28

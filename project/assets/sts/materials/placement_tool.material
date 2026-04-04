@@ -1,0 +1,5 @@
+shader: assets/sts/shaders/placement_tool
+albedo: assets/sts/textures/palette/diffuse.png
+specular: assets/sts/textures/palette/specular.png
+emission: assets/sts/textures/palette/emission.png
+backFaceCulling: true

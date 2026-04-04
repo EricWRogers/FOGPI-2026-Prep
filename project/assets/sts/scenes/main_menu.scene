@@ -1,0 +1,369 @@
+Scene: main_menu
+ClearColor: [0.0500000007, 0.0500000007, 0.0500000007, 1]
+Systems:
+  - Canis::ButtonSystem
+RenderSystems:
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 16516947501218716067
+    Name: OnClickFunctions
+    Canis::ScriptComponent: MainMenuButtons
+  - Entity: 516947501218716068
+    Name: Title
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0, 0]
+      size: [1280, 800]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0.5
+      scaleWithScreen: 1
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/title_background.png
+      uv: [0, 0, 1, 1]
+  - Entity: 6516947501218716068
+    Name: Background
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [0, 0]
+      size: [700, 700]
+      originOffset: [120, -600]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 1
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/title_image.png
+      uv: [0, 0, 1, 1]
+  - Entity: 17589894736200276847
+    Name: Play
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 3
+      position: [100, 50]
+      size: [71, 43]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: Play
+      alignment: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickPlay
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 3362746205261782680
+      down: 1862640913511338569
+      left: 0
+      right: 13587140661929839343
+      defaultSelected: true
+  - Entity: 1862640913511338569
+    Name: Survey
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 3
+      position: [100, -25]
+      size: [121, 43]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: Survey
+      alignment: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickSurvey
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 17589894736200276847
+      down: 11985458731736198952
+      left: 0
+      right: 13587140661929839343
+      defaultSelected: false
+  - Entity: 11985458731736198952
+    Name: Settings
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 3
+      position: [100, -100]
+      size: [151, 44]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: Settings
+      alignment: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickSettings
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 1862640913511338569
+      down: 12567992958980770183
+      left: 0
+      right: 13587140661929839343
+      defaultSelected: false
+  - Entity: 12567992958980770183
+    Name: Quit
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 3
+      position: [100, -175]
+      size: [70, 49]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: Quit
+      alignment: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickQuit
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 11985458731736198952
+      down: 3362746205261782680
+      left: 0
+      right: 13587140661929839343
+      defaultSelected: false
+  - Entity: 3362746205261782680
+    Name: Youtube
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [50, 50]
+      size: [60, 60]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/youtube_button.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickYoutube
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [1, 0, 0, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 12567992958980770183
+      down: 17589894736200276847
+      left: 0
+      right: 13886071203578526397
+      defaultSelected: false
+  - Entity: 13886071203578526397
+    Name: Discord
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [130, 50]
+      size: [60, 60]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/discord_button.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickDiscord
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.337254912, 0.384313732, 0.964705884, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 12567992958980770183
+      down: 17589894736200276847
+      left: 3362746205261782680
+      right: 15176869253046470959
+      defaultSelected: false
+  - Entity: 15176869253046470959
+    Name: QR
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [210, 50]
+      size: [60, 60]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/link_tree_button.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickQRCode
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 12567992958980770183
+      down: 17589894736200276847
+      left: 13886071203578526397
+      right: 0
+      defaultSelected: false
+  - Entity: 2479210058084658106
+    Name: Build Version
+    Canis::TagComponent: build_version
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 8
+      position: [-15, 40]
+      size: [225.600464, 16.8000011]
+      originOffset: [-225.600464, 0]
+      rotation: 0
+      scale: 0.400000006
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: "Build Version: 0.0.0"
+      alignment: 1
+      TextAsset:
+        path: assets/sts/fonts/KenneyFonts/Fonts/KenneyPixelSquare.ttf
+        size: 48
+  - Entity: 17807442269889945767
+    Name: Asset Version
+    Canis::TagComponent: asset_version
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 8
+      position: [-15, 15]
+      size: [232.800537, 16.8000011]
+      originOffset: [-232.800537, 0]
+      rotation: 0
+      scale: 0.400000006
+      depth: 0
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: "Asset Version: 0.0.0"
+      alignment: 1
+      TextAsset:
+        path: assets/sts/fonts/KenneyFonts/Fonts/KenneyPixelSquare.ttf
+        size: 48
+  - Entity: 13587140661929839343
+    Name: Mute
+    Canis::TagComponent: mute_button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 2
+      position: [0, 0]
+      size: [64, 64]
+      originOffset: [-64, -64]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/mute_icon.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: OnClickAudioToggle
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 12567992958980770183
+      down: 17589894736200276847
+      left: 17589894736200276847
+      right: 17589894736200276847
+      defaultSelected: false

@@ -1,0 +1,7 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "You cleared the desert of Slimes!"
+  - "Are you ready for first Boss?"
+  - "It controls the local portal!"

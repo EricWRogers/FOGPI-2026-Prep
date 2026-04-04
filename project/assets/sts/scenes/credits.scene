@@ -1,0 +1,500 @@
+Scene: credits
+ClearColor: [0, 0, 0, 1]
+Systems:
+  - Canis::ButtonSystem
+  - Canis::UISliderSystem
+  - Canis::UISliderKnobSystem
+RenderSystems:
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 17066065208811643397
+    Name: Title
+    Canis::TagComponent: MasterVolumeKnob
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 1
+      position: [0, -100]
+      size: [127, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-63.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Credits
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+  - Entity: 4106830962677677653
+    Name: Eric Rogers
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 150]
+      size: [360, 36]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Eric Rogers (yourgeekeric)
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 7261158198521029469
+    Name: Eric Rogers Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, 150]
+      size: [407, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Programming, Art, and Design
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 8654966523642379780
+    Name: Melisa Rogers
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 100]
+      size: [188, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Melisa Rogers
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 2755967195609994784
+    Name: Melisa Rogers Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, 100]
+      size: [233, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Models and UI Art
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 5763062022857067130
+    Name: Andrew Walsh
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 50]
+      size: [194, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Andrew Walsh
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 14550059093644744678
+    Name: Andrew Walsh Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, 50]
+      size: [423, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Environment and Tower Models
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 968658898481970200
+    Name: Liam York
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 0]
+      size: [130, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Liam York
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 16717208204460345939
+    Name: Liam York Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, 0]
+      size: [231, 38]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Designer and Q/A
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 16905869758966157255
+    Name: Ashlyn Christopher Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, -50]
+      size: [104, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Title Art
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 14593809605141225925
+    Name: Ashlyn Christopher
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -50]
+      size: [263, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Ashlyn Christopher
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 17479033982560049910
+    Name: Alexandr Zhelanov
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -100]
+      size: [252, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Alexandr Zhelanov
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 11161837508095307468
+    Name: Alexandr Zhelanov Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, -100]
+      size: [78, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Music
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 12716755181257435451
+    Name: Kenny Assets
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -150]
+      size: [178, 32]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Kenny Assets
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 11261037820486540141
+    Name: Kenny Assets Task
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [100, -150]
+      size: [179, 32]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Three Towers
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 11757378995093518352
+    Name: Canis
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0, 207]
+      size: [472, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-236, 0]
+      rotation: -0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Powered By The Canis Game Engine
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 10964180172997595822
+    Name: Main Menu Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 63.0000305]
+      size: [199, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-99.5, 0]
+      rotation: -0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Main Menu
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickMainMenu
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 0
+      down: 0
+      left: 0
+      right: 0
+      defaultSelected: true
+    Canis::ScriptComponent: MainMenuButton

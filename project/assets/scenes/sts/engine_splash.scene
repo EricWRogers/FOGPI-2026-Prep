@@ -1,0 +1,59 @@
+Environment:
+  ClearColor: [0, 0, 0, 1]
+Entities:
+  - Entity: 9200000000000000006
+    Name: Canvas
+    Tag: ""
+    Canis::Canvas:
+      active: true
+      renderMode: 0
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [0, 0]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
+      pivot: [0.5, 0.5]
+      originOffset: [0, 0]
+      depth: 0
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children:
+        []
+  - Entity: 9572955947183248095
+    Name: Camera
+    Tag: ""
+    Canis::Camera2D:
+      position: [0, 0]
+      scale: 1
+  - Entity: 0
+    Name: Engine Logo
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [0, 0]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000006
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 12254772419342592306
+  - Entity: 16457064345016604456
+    Name: Loader
+    Tag: ""
+    StopTheSlimes::SplashLoader: ~

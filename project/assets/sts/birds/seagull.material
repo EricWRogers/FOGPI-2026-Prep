@@ -1,0 +1,6 @@
+shader: assets/sts/birds/bird
+depth_shader: assets/sts/birds/bird_depth
+albedo: assets/sts/birds/seagull.png
+specular: assets/sts/textures/palette/yes_specular.png
+emission: assets/sts/textures/palette/yes_emission.png
+backFaceCulling: true

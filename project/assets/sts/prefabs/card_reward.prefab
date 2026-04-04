@@ -1,0 +1,37 @@
+Entities:
+  - Entity: 1
+    Canis::TagComponent: DIALOG
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0.0, 275.0]
+      size: [0.0, 0.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::TextComponent:
+      TextAsset:
+        path: "assets/sts/fonts/Antonio-Bold.ttf"
+        size: 64
+      text: Pick A Reward!
+      alignment: 2
+  - Entity: 2
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/white_panel.png
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0.0, 0.0]
+      size: [1280.0, 800.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.2
+      scaleWithScreen: 3
+    Canis::Color:
+      color: [0.14, 0.1, 0.196862, 0.7]

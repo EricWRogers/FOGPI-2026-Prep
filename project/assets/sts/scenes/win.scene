@@ -1,0 +1,147 @@
+Scene: win
+ClearColor: [0.0500000007, 0.0500000007, 0.0500000007, 1]
+Systems:
+  - Canis::ButtonSystem
+RenderSystems:
+  - Canis::SpriteRenderer2DSystem
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 1218716067
+    Name: DefeatBanner
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0, 0]
+      size: [1280, 800]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0.5
+      scaleWithScreen: 1
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/win_screen.png
+      uv: [0, 0, 1, 1]
+    Canis::ScriptComponent: VerticalCenter
+  - Entity: 169475012187
+    Name: Score Text
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0, -100]
+      size: [149, 43]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-74.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: "Score: 0"
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ScriptComponent: FinalScoreDisplay
+  - Entity: 7269846243757790606
+    Name: Island Map Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [-150, 100]
+      size: [197, 43]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-197, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Island Map
+      alignment: 1
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickIslandMap
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 0
+      down: 0
+      left: 501218716067
+      right: 501218716067
+      defaultSelected: true
+    Canis::ScriptComponent: MainMenuButton
+  - Entity: 501218716067
+    Name: Main Menu Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [150, 100]
+      size: [199, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Main Menu
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickMainMenu
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 0
+      down: 0
+      left: 7269846243757790606
+      right: 7269846243757790606
+      defaultSelected: false
+    Canis::ScriptComponent: MainMenuButton

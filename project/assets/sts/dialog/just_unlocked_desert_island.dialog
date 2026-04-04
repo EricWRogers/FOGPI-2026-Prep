@@ -1,0 +1,5 @@
+Dialog:
+  allowEarlyContinue: true
+  waitForUserInput: true
+Messages:
+  - "GOOD JOB! defeating those Forest Slimes the dessert awaits."

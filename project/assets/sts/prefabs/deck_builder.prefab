@@ -1,0 +1,73 @@
+Entities:
+  - Entity: 1
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0.0, 275.0]
+      size: [0.0, 0.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::TextComponent:
+      TextAsset:
+        path: "assets/sts/fonts/Antonio-Bold.ttf"
+        size: 64
+      text: Deck Builder
+      alignment: 2
+  - Entity: 2
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0.0, 200.0]
+      size: [0.0, 0.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::TextComponent:
+      TextAsset:
+        path: "assets/sts/fonts/Antonio-Bold.ttf"
+        size: 48
+      text: Deck (3/5)
+      alignment: 2
+    Canis::TagComponent: DECKTITLETEXT
+  - Entity: 3
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [0.0, -30.0]
+      size: [0.0, 0.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::TextComponent:
+      TextAsset:
+        path: "assets/sts/fonts/Antonio-Bold.ttf"
+        size: 48
+      text: Collection
+      alignment: 2
+  - Entity: 4
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/white_panel.png
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0.0, 0.0]
+      size: [1280.0, 800.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.2
+      scaleWithScreen: 3
+    Canis::Color:
+      color: [0.14, 0.1, 0.196862, 0.7]

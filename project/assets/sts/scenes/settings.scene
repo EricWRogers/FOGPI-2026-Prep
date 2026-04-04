@@ -1,0 +1,715 @@
+Scene: settings
+ClearColor: [0, 0, 0, 1]
+Systems:
+  - Canis::ButtonSystem
+  - Canis::UISliderSystem
+  - Canis::UISliderKnobSystem
+RenderSystems:
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 17066065208811643397
+    Name: Title
+    Canis::TagComponent: MasterVolumeKnob
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 1
+      position: [0, -100]
+      size: [151, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-75.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Settings
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+  - Entity: 4106830962677677653
+    Name: Master Volume Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 150]
+      size: [201, 32]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Master Volume
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 17168992724052586822
+    Name: Master Volume Slider
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [200, 150]
+      size: [150, 30]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/bar.png
+      uv: [0, 0.333000004, 1, 0.333000004]
+    Canis::UISliderComponent:
+      maxWidth: 150
+      minUVX: 0
+      maxUVX: 1
+      value: 1
+      targetValue: 1
+      timeToMoveFullBar: 0
+  - Entity: 12796469468752291547
+    Name: Master Volume Slider Knob
+    Canis::TagComponent: MasterVolumeKnob
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [325, 140]
+      size: [50, 50]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/energy_icon.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: ""
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [1, 1, 1, 1]
+      action: 0
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 10964180172997595822
+      down: 18157705265959231571
+      left: 0
+      right: 0
+      defaultSelected: false
+    Canis::UISliderKnobComponent:
+      eventName: MASTER_VOLUME_SLIDER_CHANGED
+      slider: 17168992724052586822
+      grabbed: false
+      value: 1
+  - Entity: 8654966523642379780
+    Name: Music Volume Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 100]
+      size: [187, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Music Volume
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 2344481155143177863
+    Name: Music Volume Slider
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [200, 100]
+      size: [150, 30]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/bar.png
+      uv: [0, 0.333000004, 1, 0.333000004]
+    Canis::UISliderComponent:
+      maxWidth: 150
+      minUVX: 0
+      maxUVX: 1
+      value: 1
+      targetValue: 1
+      timeToMoveFullBar: 0
+  - Entity: 18157705265959231571
+    Name: Music Volume Slider Knob
+    Canis::TagComponent: MusicVolumeKnob
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [325, 90]
+      size: [50, 50]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/energy_icon.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: ""
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [1, 1, 1, 1]
+      action: 0
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 12796469468752291547
+      down: 2077586153546402566
+      left: 0
+      right: 0
+      defaultSelected: false
+    Canis::UISliderKnobComponent:
+      eventName: MUSIC_VOLUME_SLIDER_CHANGED
+      slider: 2344481155143177863
+      grabbed: false
+      value: 1
+  - Entity: 14593809605141225925
+    Name: SFX Volume Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 50]
+      size: [153, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: SFX Volume
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 17089595310751289827
+    Name: SFX Volume Slider
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [200, 50]
+      size: [150, 30]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/bar.png
+      uv: [0, 0.333000004, 1, 0.333000004]
+    Canis::UISliderComponent:
+      maxWidth: 150
+      minUVX: 0
+      maxUVX: 1
+      value: 1
+      targetValue: 1
+      timeToMoveFullBar: 0
+  - Entity: 2077586153546402566
+    Name: SFX Volume Slider Knob
+    Canis::TagComponent: SFXVolumeKnob
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [325, 40]
+      size: [50, 50]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 0
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/energy_icon.png
+      uv: [0, 0, 1, 1]
+    Canis::ButtonComponent:
+      eventName: ""
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [1, 1, 1, 1]
+      action: 0
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 18157705265959231571
+      down: 9839353793554682102
+      left: 0
+      right: 0
+      defaultSelected: false
+    Canis::UISliderKnobComponent:
+      eventName: SFX_VOLUME_SLIDER_CHANGED
+      slider: 17089595310751289827
+      grabbed: false
+      value: 1
+  - Entity: 12367033300463784037
+    Name: VSync Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, 0]
+      size: [81, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: VSync
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 9839353793554682102
+    Name: VSync Button
+    Canis::TagComponent: VSyncButton
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [275, 0]
+      size: [44, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-22, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: OFF
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+    Canis::ButtonComponent:
+      eventName: OnClickVSync
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 2077586153546402566
+      down: 17697694382629280308
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 10211751857141529065
+    Name: FPS Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -50]
+      size: [133, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: FPS Target
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 17697694382629280308
+    Name: FPS Button
+    Canis::TagComponent: FPSButton
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [275, -50]
+      size: [33, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-16.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: 30
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+    Canis::ButtonComponent:
+      eventName: OnClickFPS
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 9839353793554682102
+      down: 39499604828784431
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 83084053693434936
+    Name: Shadow Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -100]
+      size: [208, 38]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Shadow Quality
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 39499604828784431
+    Name: Shadow Button
+    Canis::TagComponent: ShadowButton
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [275, -100]
+      size: [109, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-54.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Medium
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+    Canis::ButtonComponent:
+      eventName: OnClickShadow
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 17697694382629280308
+      down: 6874964142798879689
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 12298532829733529001
+    Name: Ocean Detials Label
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [-400, -150]
+      size: [185, 33]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: -0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Ocean Detials
+      alignment: 0
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+  - Entity: 6874964142798879689
+    Name: Ocean Detials Button
+    Canis::TagComponent: OceanDetailsButton
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 4
+      position: [275, -150]
+      size: [62, 32]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-31, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Ultra
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 36
+    Canis::ButtonComponent:
+      eventName: OnClickOceanDetails
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1.10000002
+      up: 39499604828784431
+      down: 14075705757990251268
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 14075705757990251268
+    Name: Credits Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 175]
+      size: [127, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-63.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Credits
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickCredits
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.263000011, 0.90200001, 0.375999987, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 6874964142798879689
+      down: 10964180172997595822
+      left: 0
+      right: 0
+      defaultSelected: false
+  - Entity: 10964180172997595822
+    Name: Main Menu Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 100]
+      size: [199, 44]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-99.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: ~
+    Canis::TextComponent:
+      text: Main Menu
+      alignment: 2
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: Main_Menu_Button
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 14075705757990251268
+      down: 0
+      left: 0
+      right: 0
+      defaultSelected: true
+  - Entity: 11620874555246173275
+    Name: Settings Menu Functions
+    Canis::ScriptComponent: SettingsMenuFunctions

@@ -1,0 +1,435 @@
+Environment:
+  ClearColor: [0.1617647, 0.17690311, 0.3333333, 1]
+Entities:
+  - Entity: 9200000000000000008
+    Name: Canvas
+    Tag: ""
+    Canis::Canvas:
+      active: true
+      renderMode: 0
+      scaleMode: 1
+      screenSize: [1280, 800]
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [0, 0]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
+      pivot: [0.5, 0.5]
+      originOffset: [0, 0]
+      depth: 0
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children:
+        - 516947501218716068
+        - 6516947501218716068
+        - 17589894736200276847
+        - 1862640913511338569
+        - 11985458731736198952
+        - 12567992958980770183
+        - 3362746205261782680
+        - 13886071203578526397
+        - 15176869253046470959
+        - 2479210058084658106
+        - 17807442269889945767
+        - 13587140661929839343
+  - Entity: 16516947501218716067
+    Name: OnClickFunctions
+    Tag: ""
+    StopTheSlimes::MainMenuController: ~
+  - Entity: 516947501218716068
+    Name: Background
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [1280, 800]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 0.001
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 9323272342120747914
+  - Entity: 6516947501218716068
+    Name: Title
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [700, 700]
+      scale: [1, 1]
+      anchorMin: [0.5, 1]
+      anchorMax: [0.5, 1]
+      pivot: [0.5, 1]
+      originOffset: [120, 0]
+      depth: 0.5
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 4794085777098037154
+  - Entity: 17589894736200276847
+    Name: Play
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [100, 50]
+      size: [77, 50]
+      scale: [1, 1]
+      anchorMin: [0, 0.5]
+      anchorMax: [0, 0.5]
+      pivot: [0, 0.5]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: Play
+      color: [1, 1, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 48
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickPlay
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 1862640913511338569
+    Name: Survey
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [100, -25]
+      size: [123, 50]
+      scale: [1, 1]
+      anchorMin: [0, 0.5]
+      anchorMax: [0, 0.5]
+      pivot: [0, 0.5]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: Survey
+      color: [1, 1, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 48
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickSurvey
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 11985458731736198952
+    Name: Settings
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [100, -100]
+      size: [153, 50]
+      scale: [1, 1]
+      anchorMin: [0, 0.5]
+      anchorMax: [0, 0.5]
+      pivot: [0, 0.5]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: Settings
+      color: [1, 1, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 48
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickSettings
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 12567992958980770183
+    Name: Quit
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [100, -175]
+      size: [75, 50]
+      scale: [1, 1]
+      anchorMin: [0, 0.5]
+      anchorMax: [0, 0.5]
+      pivot: [0, 0.5]
+      originOffset: [0, 0]
+      depth: 1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: Quit
+      color: [1, 1, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 48
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickQuit
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 3362746205261782680
+    Name: Youtube
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [50, 50]
+      size: [60, 60]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 3293026713072234773
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickYoutube
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [1, 0, 0, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 13886071203578526397
+    Name: Discord
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [130, 50]
+      size: [60, 60]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 4935316741110342508
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickDiscord
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.3372549, 0.38431373, 0.9647059, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 15176869253046470959
+    Name: QR
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [210, 50]
+      size: [60, 60]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 2125407912133930934
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickQRCode
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 2479210058084658106
+    Name: Build Version
+    Tag: build_version
+    Canis::RectTransform:
+      active: true
+      position: [-15, 40]
+      size: [570.0001, 54.000004]
+      scale: [0.4, 0.4]
+      anchorMin: [1, 0]
+      anchorMax: [1, 0]
+      pivot: [1, 0]
+      originOffset: [-225.60046, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: "Build Version: 0.0.0"
+      color: [1, 1, 1, 1]
+      alignment: 1
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 2132735697736181352
+        fontSize: 48
+  - Entity: 17807442269889945767
+    Name: Asset Version
+    Tag: asset_version
+    Canis::RectTransform:
+      active: true
+      position: [-15, 15]
+      size: [588.0001, 54.000004]
+      scale: [0.4, 0.4]
+      anchorMin: [1, 0]
+      anchorMax: [1, 0]
+      pivot: [1, 0]
+      originOffset: [-232.80054, 0]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Text:
+      text: "Asset Version: 0.0.0"
+      color: [1, 1, 1, 1]
+      alignment: 1
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 2132735697736181352
+        fontSize: 48
+  - Entity: 13587140661929839343
+    Name: Mute
+    Tag: mute_button
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [64, 64]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [-64, -64]
+      depth: 0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000008
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 7165974208067731800
+    Canis::UIButton:
+      active: true
+      targetEntity: 16516947501218716067
+      targetScript: StopTheSlimes::MainMenuController
+      actionName: OnClickAudioToggle
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.2627451, 0.9019608, 0.3764706, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98

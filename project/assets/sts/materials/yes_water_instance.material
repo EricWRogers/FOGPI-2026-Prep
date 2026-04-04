@@ -1,0 +1,6 @@
+shader: assets/sts/shaders/wind/wind_effect_environment
+depth_shader: assets/sts/shaders/wind/wind_mapping_depth_instance
+albedo: assets/sts/textures/palette/yes_diffuse.png
+specular: assets/sts/textures/palette/yes_specular.png
+emission: assets/sts/textures/palette/yes_emission.png
+backFaceCulling: true

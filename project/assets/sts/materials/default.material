@@ -1,0 +1,8 @@
+shader: assets/shaders/model3d
+albedo: assets/sts/textures/palette/diffuse.png
+specular: assets/sts/textures/palette/specular.png
+color: [1, 1, 1, 1]
+backFaceCulling: true
+specularValue: 0.18
+roughnessValue: 0.78
+metallicValue: 0.0

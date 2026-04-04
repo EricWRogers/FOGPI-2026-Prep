@@ -1,0 +1,86 @@
+Entities:
+  - Entity: 11548122720569067986
+    Name: Dialog
+    Canis::TagComponent: DIALOG
+    Canis::Color:
+      color: [0.200000003, 0.200000003, 0.200000003, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: false
+      anchor: 6
+      position: [40, 40]
+      size: [1200, 250]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children: [11686541764204569804, 8988835732786732145]
+    Canis::UIImageComponent:
+      TextureAsset:
+        path: assets/sts/textures/ui/white_panel.png
+      uv: [0, 0, 1, 1]
+    Canis::ScriptComponent: Dialog
+  - Entity: 11686541764204569804
+    Name: Dialog Text
+    Canis::TagComponent: ""
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 0
+      position: [30.9999695, -43.9999237]
+      size: [1050, 24]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [0, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children: ~
+    Canis::TextComponent:
+      text: In the beginning, God created the heavens and the earth. 2 The earth was without form and void, and darkness was over the face of the deep. And the Spirit of God was hovering over the face of the waters.3 And God said, “Let there be light,” and there was light. 4 And God saw that the light was good. And God separated the light from the darkness. 5 God called the light Day, and the darkness he called Night. And there was evening and there was morning, the first day.
+      alignment: 0
+      horizontalBoundary: 1
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28
+  - Entity: 8988835732786732145
+    Name: Dialog Continue
+    Canis::TagComponent: ""
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 8
+      position: [-20, 20]
+      size: [189, 21]
+      inheritWidth: false
+      inheritHeight: false
+      originOffset: [-189, 0]
+      rotation: -0
+      scale: 1
+      depth: -1
+      scaleWithScreen: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children: ~
+    Canis::TextComponent:
+      text: "[SPACE] or (A)"
+      alignment: 1
+      horizontalBoundary: 0
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 28

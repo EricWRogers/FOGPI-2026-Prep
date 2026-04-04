@@ -1,0 +1,142 @@
+Environment:
+  ClearColor:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 1.0
+Entities:
+- Entity: 11548122720569067986
+  Name: Dialog
+  Tag: DIALOG
+  Canis::RectTransform:
+    active: false
+    position:
+    - 40
+    - 40
+    size:
+    - 1200
+    - 250
+    scale:
+    - 1
+    - 1
+    anchorMin: &id001
+    - 0.0
+    - 0.0
+    anchorMax: *id001
+    pivot: *id001
+    originOffset:
+    - 0
+    - 0
+    depth: -1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 0
+    children:
+    - 11686541764204569804
+    - 8988835732786732145
+  Canis::Sprite2D:
+    color:
+    - 0.200000003
+    - 0.200000003
+    - 0.200000003
+    - 1
+    uv:
+    - 0
+    - 0
+    - 1
+    - 1
+    flipX: false
+    flipY: false
+    TextureAsset:
+      path: assets/sts/textures/ui/white_panel.png
+  StopTheSlimes::DialogController: {}
+- Entity: 11686541764204569804
+  Name: Dialog Text
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - 30.9999695
+    - -43.9999237
+    size:
+    - 1050
+    - 24
+    scale:
+    - 1
+    - 1
+    anchorMin: &id002
+    - 0.0
+    - 1.0
+    anchorMax: *id002
+    pivot: *id002
+    originOffset:
+    - 0
+    - 0
+    depth: -1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 11548122720569067986
+    children: []
+  Canis::Text:
+    text: "In the beginning, God created the heavens and the earth. 2 The earth was\
+      \ without form and void, and darkness was over the face of the deep. And the\
+      \ Spirit of God was hovering over the face of the waters.3 And God said, \u201C\
+      Let there be light,\u201D and there was light. 4 And God saw that the light\
+      \ was good. And God separated the light from the darkness. 5 God called the\
+      \ light Day, and the darkness he called Night. And there was evening and there\
+      \ was morning, the first day."
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 0
+    horizontalBoundary: 1
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 28
+- Entity: 8988835732786732145
+  Name: Dialog Continue
+  Tag: ''
+  Canis::RectTransform:
+    active: true
+    position:
+    - -20
+    - 20
+    size:
+    - 189
+    - 21
+    scale:
+    - 1
+    - 1
+    anchorMin: &id003
+    - 1.0
+    - 0.0
+    anchorMax: *id003
+    pivot: *id003
+    originOffset:
+    - -189
+    - 0
+    depth: -1
+    rotation: 0
+    rotationOriginOffset:
+    - 0
+    - 0
+    parent: 11548122720569067986
+    children: []
+  Canis::Text:
+    text: '[SPACE] or (A)'
+    color:
+    - 1
+    - 1
+    - 1
+    - 1
+    alignment: 1
+    horizontalBoundary: 0
+    FontAsset:
+      path: assets/sts/fonts/Antonio-Bold.ttf
+      fontSize: 28

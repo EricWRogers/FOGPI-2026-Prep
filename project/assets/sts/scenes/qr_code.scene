@@ -1,0 +1,61 @@
+Scene: qr_code
+Systems:
+  - Canis::ButtonSystem
+  - Canis::SpriteAnimationSystem
+RenderSystems:
+  - Canis::SpriteRenderer2DSystem
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 10964180172997595822
+    Name: Main Menu Button
+    Canis::Color:
+      color: [1, 1, 1, 1]
+      emission: [0, 0, 0]
+      emissionUsingAlbedoIntesity: 0
+    Canis::RectTransform:
+      active: true
+      anchor: 7
+      position: [0, 100]
+      size: [199, 44]
+      originOffset: [-99.5, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 0
+    Canis::TextComponent:
+      text: Main Menu
+      alignment: 2
+      TextAsset:
+        path: assets/sts/fonts/Antonio-Bold.ttf
+        size: 48
+    Canis::ButtonComponent:
+      eventName: OnClickMainMenu
+      baseColor: [0.899999976, 0.899999976, 0.899999976, 1]
+      hoverColor: [0.262745112, 0.90196079, 0.376470596, 1]
+      action: 1
+      mouseOver: false
+      scale: 1
+      hoverScale: 1
+      up: 0
+      down: 0
+      left: 0
+      right: 0
+      defaultSelected: true
+    Canis::ScriptComponent: MainMenuButton
+  - Entity: 6947501218716067
+    Name: OnClick
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/qr_code.png
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0.0, 100.0]
+      size: [512.0, 512.0]
+      originOffset: [0.0, 0.0]
+      rotation: 0.0
+      scale: 1.0
+      depth: 0.0
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0] 

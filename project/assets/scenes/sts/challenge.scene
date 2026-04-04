@@ -1,0 +1,795 @@
+Environment:
+  ClearColor: [0, 0, 0, 1]
+  SkyboxAsset:
+    uuid: 9041318343503679699
+Entities:
+  - Entity: 9200000000000000001
+    Name: Canvas
+    Tag: ""
+    Canis::Canvas:
+      active: true
+      renderMode: 0
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [0, 0]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [1, 1]
+      pivot: [0.5, 0.5]
+      originOffset: [0, 0]
+      depth: 0
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 0
+      children:
+        - 15542344841898700423
+        - 8067537025978682423
+        - 4979503114445751493
+        - 11548122720569067986
+  - Entity: 2516947501218716067
+    Name: ChallengeSuperObject
+    Tag: ""
+    StopTheSlimes::ChallengeController: ~
+  - Entity: 16416297353335535662
+    Name: DirectionalLight
+    Tag: DIRECTIONLIGHT
+    Canis::Transform:
+      active: true
+      position: [0, 30, 30]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 0
+      children:
+        []
+    Canis::DirectionalLight:
+      enabled: true
+      color: [0.961, 0.953, 0.863, 1]
+      intensity: 1
+      direction: [0.336861, -0.842152, -0.421076]
+  - Entity: 9200000000000001001
+    Name: ChallengeCameraPivot
+    Tag: CAMERAPIVOT
+    Canis::Transform:
+      active: true
+      position: [11.5, 0.5, 14]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 0
+      children:
+        - 9200000000000001002
+  - Entity: 9200000000000001002
+    Name: ChallengeCamera
+    Tag: MainCamera
+    Canis::Transform:
+      active: true
+      position: [-30, 30, 4]
+      rotation: [-0.7809928, -1.4382448, 0]
+      scale: [1, 1, 1]
+      parent: 9200000000000001001
+      children:
+        []
+    Canis::Camera:
+      primary: true
+      fovDegrees: 30
+      nearClip: 0.1
+      farClip: 500
+  - Entity: 9073877394109962344
+    Name: QuestionMark 0
+    Tag: Q0
+    Canis::Transform:
+      active: false
+      position: [11.5, 0.5, 14]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 5543214108425261460
+    Name: QuestionMark 1
+    Tag: Q1
+    Canis::Transform:
+      active: true
+      position: [11.5, 0.5, 54]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 14405537189917772963
+    Name: QuestionMark 2
+    Tag: Q2
+    Canis::Transform:
+      active: true
+      position: [11.5, 0.5, 94]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 14390388357021922628
+    Name: QuestionMark 3
+    Tag: Q3
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 94]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 10261203364196943030
+    Name: QuestionMark 4
+    Tag: Q4
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 54]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 18357182262160254259
+    Name: QuestionMark 5
+    Tag: Q5
+    Canis::Transform:
+      active: true
+      position: [51.5, 0.5, 14]
+      rotation: [0, 0, 0]
+      scale: [3, 3, 3]
+      parent: 0
+      children:
+        []
+    Canis::SphereCollider:
+      active: true
+      radius: 1
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13029975401581696848
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 16336493964791467506
+  - Entity: 15542344841898700423
+    Name: Right Arrow
+    Tag: RIGHT_ARROW
+    Canis::RectTransform:
+      active: true
+      position: [-386.25, -37.5]
+      size: [52.999973, 75.000374]
+      scale: [1, 1]
+      anchorMin: [1, 0.5]
+      anchorMax: [1, 0.5]
+      pivot: [1, 0.5]
+      originOffset: [0, 0]
+      depth: 1
+      rotation: 0
+      rotationOriginOffset: [26.5, 37.5]
+      parent: 9200000000000000001
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 2056417872678082217
+    Canis::UIButton:
+      active: true
+      targetEntity: 2516947501218716067
+      targetScript: StopTheSlimes::ChallengeController
+      actionName: OnClickChallengeRight
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 12197991084070871116
+    Name: Quest 3 Text
+    Tag: QUEST_3_TEXT
+    Canis::RectTransform:
+      active: true
+      position: [23, -205]
+      size: [186, 17]
+      scale: [1, 1]
+      anchorMin: [0, 1]
+      anchorMax: [0, 1]
+      pivot: [0, 1]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Text:
+      text: Victory without losing Health
+      color: [0.82, 0.973, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 16
+  - Entity: 17692328406333038100
+    Name: Quest 3 Check
+    Tag: QUEST_3_CHECK
+    Canis::RectTransform:
+      active: true
+      position: [-60, -205]
+      size: [20, 20]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 3240031449800136491
+  - Entity: 14446542523008083388
+    Name: Quest 3 X
+    Tag: QUEST_3_X
+    Canis::RectTransform:
+      active: true
+      position: [-58, -203]
+      size: [16, 16]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 8714656514379976204
+  - Entity: 8067537025978682423
+    Name: Left Arrow
+    Tag: LEFT_ARROW
+    Canis::RectTransform:
+      active: true
+      position: [27.5, -37.5]
+      size: [55, 76]
+      scale: [1, 1]
+      anchorMin: [0, 0.5]
+      anchorMax: [0, 0.5]
+      pivot: [0, 0.5]
+      originOffset: [0, 0]
+      depth: 1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000001
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 14458962989861277249
+    Canis::UIButton:
+      active: true
+      targetEntity: 2516947501218716067
+      targetScript: StopTheSlimes::ChallengeController
+      actionName: OnClickChallengeLeft
+      baseColor: [1, 1, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      pressedColor: [0.85, 0.85, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 4979503114445751493
+    Name: Quest Panel
+    Tag: QUEST
+    Canis::RectTransform:
+      active: true
+      position: [-319, -344.5]
+      size: [309, 689]
+      scale: [1, 1]
+      anchorMin: [1, 0.5]
+      anchorMax: [1, 0.5]
+      pivot: [1, 0.5]
+      originOffset: [0, 0]
+      depth: 0
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000001
+      children:
+        - 8885453741316286307
+        - 2478961397421072626
+        - 1433106256365409369
+        - 16950774635683120090
+        - 15260304597076073590
+        - 11145315590339422726
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 14557017772970372971
+  - Entity: 11548122720569067986
+    Name: Dialog
+    Tag: DIALOG
+    Canis::RectTransform:
+      active: false
+      position: [40, 40]
+      size: [1200, 250]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 9200000000000000001
+      children:
+        - 11686541764204569804
+        - 8988835732786732145
+    Canis::Sprite2D:
+      color: [0.2, 0.2, 0.2, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 4247094937321656284
+    StopTheSlimes::DialogController: ~
+  - Entity: 8885453741316286307
+    Name: Quest Title
+    Tag: QUEST_TITLE
+    Canis::RectTransform:
+      active: true
+      position: [0, -60]
+      size: [82, 33]
+      scale: [1, 1]
+      anchorMin: [0.5, 1]
+      anchorMax: [0.5, 1]
+      pivot: [0.5, 1]
+      originOffset: [-40.5, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        []
+    Canis::Text:
+      text: QUESTS
+      color: [0.82, 0.973, 1, 1]
+      alignment: 2
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 32
+  - Entity: 2478961397421072626
+    Name: Score
+    Tag: HIGH_SCORE
+    Canis::RectTransform:
+      active: true
+      position: [0, -88]
+      size: [66, 23]
+      scale: [1, 1]
+      anchorMin: [0.5, 1]
+      anchorMax: [0.5, 1]
+      pivot: [0.5, 1]
+      originOffset: [-34, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        []
+    Canis::Text:
+      text: "Score: 0"
+      color: [0.82, 0.973, 1, 1]
+      alignment: 2
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 22
+  - Entity: 1433106256365409369
+    Name: Dash Line
+    Tag: DASH_LINE
+    Canis::RectTransform:
+      active: true
+      position: [-135, -109]
+      size: [259, 13]
+      scale: [1, 1]
+      anchorMin: [0.5, 1]
+      anchorMax: [0.5, 1]
+      pivot: [0.5, 1]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 11959918455527615149
+  - Entity: 6442295437872337223
+    Name: Quest 1 Text
+    Tag: QUEST_1_TEXT
+    Canis::RectTransform:
+      active: true
+      position: [24, -135]
+      size: [54, 17]
+      scale: [1, 1]
+      anchorMin: [0, 1]
+      anchorMax: [0, 1]
+      pivot: [0, 1]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Text:
+      text: Victory!!
+      color: [0.82, 0.973, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 16
+  - Entity: 2106403046281659146
+    Name: Quest 1 Check
+    Tag: QUEST_1_CHECK
+    Canis::RectTransform:
+      active: true
+      position: [-60, -135]
+      size: [20, 20]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 3240031449800136491
+  - Entity: 8480683032190908718
+    Name: Quest 1 X
+    Tag: QUEST_1_X
+    Canis::RectTransform:
+      active: true
+      position: [-58, -133]
+      size: [16, 16]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 8714656514379976204
+  - Entity: 11727301125121346899
+    Name: Quest 2 Text
+    Tag: QUEST_2_TEXT
+    Canis::RectTransform:
+      active: true
+      position: [24, -170]
+      size: [217, 17]
+      scale: [1, 1]
+      anchorMin: [0, 1]
+      anchorMax: [0, 1]
+      pivot: [0, 1]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Text:
+      text: Victory without using a Fire Tower
+      color: [0.82, 0.973, 1, 1]
+      alignment: 0
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 16
+  - Entity: 8942105713739368679
+    Name: Quest 2 Check
+    Tag: QUEST_2_CHECK
+    Canis::RectTransform:
+      active: true
+      position: [-60, -170]
+      size: [20, 20]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 3240031449800136491
+  - Entity: 7729217397873293050
+    Name: Quest 2 X
+    Tag: QUEST_2_X
+    Canis::RectTransform:
+      active: true
+      position: [-58, -168]
+      size: [16, 16]
+      scale: [1, 1]
+      anchorMin: [1, 1]
+      anchorMax: [1, 1]
+      pivot: [1, 1]
+      originOffset: [0, 0]
+      depth: -2
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 16950774635683120090
+      children:
+        []
+    Canis::Sprite2D:
+      color: [1, 1, 1, 1]
+      uv: [0, 0, 1, 1]
+      flipX: false
+      flipY: false
+      TextureAsset:
+        uuid: 8714656514379976204
+  - Entity: 15260304597076073590
+    Name: Continue
+    Tag: CONTINUE
+    Canis::RectTransform:
+      active: true
+      position: [0, 80.000015]
+      size: [45, 28]
+      scale: [1, 1]
+      anchorMin: [0.5, 0]
+      anchorMax: [0.5, 0]
+      pivot: [0.5, 0]
+      originOffset: [-21.5, 0]
+      depth: -0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        []
+    Canis::Text:
+      text: Play
+      color: [1, 1, 1, 1]
+      alignment: 2
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 28
+    Canis::UIButton:
+      active: true
+      targetEntity: 2516947501218716067
+      targetScript: StopTheSlimes::ChallengeController
+      actionName: OnClickChallengeContinue
+      baseColor: [0.82, 0.973, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      pressedColor: [0.697, 0.82705, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+  - Entity: 11145315590339422726
+    Name: MainMenu
+    Tag: C
+    Canis::RectTransform:
+      active: true
+      position: [0, 40]
+      size: [120, 28]
+      scale: [1, 1]
+      anchorMin: [0.5, 0]
+      anchorMax: [0.5, 0]
+      pivot: [0.5, 0]
+      originOffset: [-58, 0]
+      depth: -0.1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        []
+    Canis::Text:
+      text: Main Menu
+      color: [1, 1, 1, 1]
+      alignment: 2
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 28
+    Canis::UIButton:
+      active: true
+      targetEntity: 2516947501218716067
+      targetScript: StopTheSlimes::ChallengeController
+      actionName: OnClickMainMenu
+      baseColor: [0.82, 0.973, 1, 1]
+      hoverColor: [0.506, 0.506, 0.761, 1]
+      pressedColor: [0.697, 0.82705, 0.85, 1]
+      baseScale: 1
+      hoverScale: 1.1
+      pressedScale: 0.98
+    StopTheSlimes::MainMenuButton: ~
+  - Entity: 16950774635683120090
+    Name: CheckList
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [0, 0]
+      size: [309, 689]
+      scale: [1, 1]
+      anchorMin: [0, 0]
+      anchorMax: [0, 0]
+      pivot: [0, 0]
+      originOffset: [0, 0]
+      depth: 1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 4979503114445751493
+      children:
+        - 6442295437872337223
+        - 2106403046281659146
+        - 8480683032190908718
+        - 11727301125121346899
+        - 8942105713739368679
+        - 7729217397873293050
+        - 12197991084070871116
+        - 17692328406333038100
+        - 14446542523008083388
+  - Entity: 11686541764204569804
+    Name: Dialog Text
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [30.99997, -43.999924]
+      size: [1050, 24]
+      scale: [1, 1]
+      anchorMin: [0, 1]
+      anchorMax: [0, 1]
+      pivot: [0, 1]
+      originOffset: [0, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children:
+        []
+    Canis::Text:
+      text: In the beginning, God created the heavens and the earth. 2 The earth was without form and void, and darkness was over the face of the deep. And the Spirit of God was hovering over the face of the waters.3 And God said, “Let there be light,” and there was light. 4 And God saw that the light was good. And God separated the light from the darkness. 5 God called the light Day, and the darkness he called Night. And there was evening and there was morning, the first day.
+      color: [1, 1, 1, 1]
+      alignment: 0
+      horizontalBoundary: 1
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 28
+  - Entity: 8988835732786732145
+    Name: Dialog Continue
+    Tag: ""
+    Canis::RectTransform:
+      active: true
+      position: [-20, 20]
+      size: [140, 27]
+      scale: [1, 1]
+      anchorMin: [1, 0]
+      anchorMax: [1, 0]
+      pivot: [1, 0]
+      originOffset: [-140, 0]
+      depth: -1
+      rotation: 0
+      rotationOriginOffset: [0, 0]
+      parent: 11548122720569067986
+      children:
+        []
+    Canis::Text:
+      text: "[SPACE] or (A)"
+      color: [1, 1, 1, 1]
+      alignment: 1
+      horizontalBoundary: 0
+      FontAsset:
+        uuid: 17286453836404393950
+        fontSize: 28

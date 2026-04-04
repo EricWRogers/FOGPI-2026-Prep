@@ -1,0 +1,34 @@
+Scene: engine_splash
+ClearColor: [0, 0, 0, 1]
+Systems:
+RenderSystems:
+  - Canis::SpriteRenderer2DSystem
+  - Canis::RenderTextSystem
+  - Canis::RenderHUDSystem
+Entities:
+  - Entity: 9572955947183248095
+    Name: Camera
+    Canis::Camera2DComponent:
+      position: [0, 0]
+      scale: 1
+  - Entity: 26457064345016604456
+    Name: Engine Logo
+    Canis::RectTransform:
+      active: true
+      anchor: 6
+      position: [0, 0]
+      size: [1280, 720]
+      originOffset: [0, 0]
+      rotation: 0
+      scale: 1
+      depth: 1
+      scaleWithScreen: 1
+    Canis::Color:
+      color: [1.0, 1.0, 1.0, 1.0]
+    Canis::UIImageComponent:
+      uv: [0.0, 0.0, 1.0, 1.0]
+      TextureAsset:
+        path: assets/sts/textures/ui/canis_logo_splash.png
+  - Entity: 16457064345016604456
+    Name: Loader
+    Canis::ScriptComponent: SplashLoader
