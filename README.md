@@ -8,7 +8,7 @@ Custom C++ game engine and gameplay runtime built around:
 
 ## Documentation
 
-- [Engine guide](docs/engine-guide.md)
+- [Engine guide](canis/docs/engine-guide.md)
 
 ## Build
 
@@ -17,6 +17,16 @@ git submodule update --init --recursive
 cmake -S . -B build
 cmake --build build -j4
 ```
+
+## Generate A Gameplay Script
+
+```bash
+./scripts/create-game-script.sh RollABall/EnemySpawner
+./scripts/create-game-script.sh RollABall/EnemySpawner Canis::Transform Canis::Rigidbody
+```
+
+That creates matching boilerplate files under `game/include/...` and `game/src/...`.
+New files are picked up automatically by the existing CMake-generated `RegisterScripts.generated.hpp` flow.
 
 ## Run
 
@@ -35,7 +45,7 @@ python3 -m http.server 8000 --directory build-web-debug/web
 ```
 
 That bootstraps Emscripten and writes an HTML5 export to `build-web-release/web/`.
-More detail: [Web export guide](docs/web-build.md)
+More detail: [Web export guide](canis/docs/web-build.md)
 
 ## Ubuntu Dependencies
 

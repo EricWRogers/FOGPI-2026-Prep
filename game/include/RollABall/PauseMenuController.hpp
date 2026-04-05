@@ -14,6 +14,7 @@ namespace RollABall
     public:
         static constexpr const char* ScriptName = "RollABall::PauseMenuController";
         Canis::Entity* pauseMenu = nullptr;
+        Canis::SceneAssetHandle mainMenuScene;
         Canis::AudioAssetHandle uiClickSFX = {};
         float clickVolume = 0.45f;
 
@@ -26,6 +27,7 @@ namespace RollABall
         bool UpdateWhenPaused() const override { return true; }
 
         void ResumeAction(const Canis::UIActionContext& _context);
+        void MainMenuAction(const Canis::UIActionContext& _context);
         void QuitAction(const Canis::UIActionContext& _context);
 
     private:

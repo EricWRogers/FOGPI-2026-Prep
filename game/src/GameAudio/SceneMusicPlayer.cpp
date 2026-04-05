@@ -44,8 +44,7 @@ namespace GameAudio
             Canis::AudioManager::StopMusic();
     }
 
-    void SceneMusicPlayer::Update(float _dt)
+    void SceneMusicPlayer::Update(float)
     {
-        (void)_dt;
     }
 }

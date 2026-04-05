@@ -39,10 +39,8 @@ namespace ExampleStateMachine
         m_owner.ResetHammerPose();
     }
 
-    void IdleState::Update(float _dt)
+    void IdleState::Update(float)
     {
-        (void)_dt;
-
         if (m_owner.FindClosestTarget() != nullptr)
             m_owner.ChangeState(ChaseState::Name);
     }
@@ -87,10 +85,8 @@ namespace ExampleStateMachine
         m_owner.SetHammerSwing(0.0f);
     }
 
-    void HammerTimeState::Update(float _dt)
+    void HammerTimeState::Update(float)
     {
-        (void)_dt;
-
         if (Canis::Entity* target = m_owner.FindClosestTarget())
             m_owner.FaceTarget(*target);
 

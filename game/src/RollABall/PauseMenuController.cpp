@@ -23,12 +23,14 @@ namespace RollABall
     void RegisterPauseMenuControllerScript(Canis::App& _app)
     {
         REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, pauseMenu);
+        REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, mainMenuScene);
         REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, uiClickSFX);
         REGISTER_PROPERTY(pauseMenuConf, RollABall::PauseMenuController, clickVolume);
 
         DEFAULT_CONFIG_AND_REQUIRED(pauseMenuConf, RollABall::PauseMenuController, Canis::Canvas);
 
         RegisterUIAction<RollABall::PauseMenuController>(pauseMenuConf, "resume", &RollABall::PauseMenuController::ResumeAction);
+        RegisterUIAction<RollABall::PauseMenuController>(pauseMenuConf, "MainMenu", &RollABall::PauseMenuController::MainMenuAction);
         RegisterUIAction<RollABall::PauseMenuController>(pauseMenuConf, "quit", &RollABall::PauseMenuController::QuitAction);
 
         pauseMenuConf.DEFAULT_DRAW_INSPECTOR(RollABall::PauseMenuController);
@@ -99,23 +101,25 @@ namespace RollABall
         Canis::AudioManager::PlaySFX(uiClickSFX, clickVolume);
     }
 
-    void PauseMenuController::Update(float _dt)
+    void PauseMenuController::Update(float)
     {
-        (void)_dt;
-
         if (entity.scene.GetInputManager().JustPressedKey(Canis::Key::ESCAPE))
             SetMenuVisible(!IsMenuVisible());
     }
 
-    void PauseMenuController::ResumeAction(const Canis::UIActionContext& _context)
+    void PauseMenuController::ResumeAction(const Canis::UIActionContext&)
     {
-        (void)_context;
         SetMenuVisible(false);
     }
 
-    void PauseMenuController::QuitAction(const Canis::UIActionContext& _context)
+    void PauseMenuController::MainMenuAction(const Canis::UIActionContext&)
     {
-        (void)_context;
+        SetMenuVisible(false);
+        entity.scene.app->LoadScene(mainMenuScene);
+    }
+
+    void PauseMenuController::QuitAction(const Canis::UIActionContext&)
+    {
         SetMenuVisible(false);
         entity.scene.QuitGame();
     }

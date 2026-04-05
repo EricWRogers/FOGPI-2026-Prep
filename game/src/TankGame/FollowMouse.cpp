@@ -43,10 +43,8 @@ namespace TankGame
 
     void FollowMouse::Destroy() {}
 
-    void FollowMouse::Update(float _dt)
+    void FollowMouse::Update(float)
     {
-        (void)_dt;
-
         if (m_transform == nullptr)
             return;
 

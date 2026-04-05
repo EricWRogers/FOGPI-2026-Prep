@@ -1,4 +1,4 @@
-useFrameLimit: true
+useFrameLimit: false
 frameLimit: 30
 frameLimitEditor: 30
 overrideSeed: false
@@ -11,7 +11,7 @@ editor: true
 syncMode: 0
 iconUUID: 8708093225096235882
 launchScene: 18358078127499100431
-editorWindowWidth: 1280
-editorWindowHeight: 752
+editorWindowWidth: 1920
+editorWindowHeight: 1142
 targetGameWidth: 512
 targetGameHeight: 512

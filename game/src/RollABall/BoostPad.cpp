@@ -46,9 +46,8 @@ namespace RollABall
 
     void BoostPad::Destroy() {}
 
-    void BoostPad::Update(float _dt)
+    void BoostPad::Update(float)
     {
-        (void)_dt;
         CheckSensorEnter();
     }
 
